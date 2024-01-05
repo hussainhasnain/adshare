@@ -1,0 +1,350 @@
+
+    <main class="dashboard__row">
+     <!--=========================== myAccount Page Starts Here =============================== -->   
+        <div class="myAccount">                
+                <div class="myAccount__content">
+                    <div class="myAccount__heading">
+                        <h3 class="myAccount__heading--text firstlastb">
+                            User settings for {{n.FirstName}} {{n.LastName}}
+                        </h3>
+                    </div>
+                    <div class="myAccount__textboxArea">
+                        <div class="myAccount__textbox">
+                            
+                            <div class="myAccount__heading--personal">
+                                <h4 class="myAccount__heading--personal-text">
+                                    Personal details
+                                </h4>
+                            </div>
+    
+                            <p class="myAccount__para">
+                                Update your name and email address that you use for AdShare. Learn how we keep your data safe, view our <span class="myAccount__para--span">
+                                    <a href="/privacy" class="myAccount__para--span-link">privacy notice.</a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="myAccount__forms" oninput="enableSaveButton1()">
+                        
+                            <form action="#" class="myAccount__form">
+                                <div class="myAccount__form--group">
+                                    <label for="firstname" class="myAccount__form--label">First Name</label>
+                                    <input type="text" name="start"  class="myAccount__form--input FirstName" value="{{n.FirstName}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="lastname" class="myAccount__form--label">Last Name</label>
+                                    <input type="text" class="myAccount__form--input LastName" name="start" value="{{n.LastName}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="email" class="myAccount__form--label">Email</label>
+                                    <input type="email" class="myAccount__form--input EmailAddress" name="start" value="{{n.EmailAddress}}" required>
+                                </div>
+
+                                <div class="myAccount__form--buttons">
+                                    <input type="button" value="Save Changes" id="saveButtonFirst" class="myAccount__form--buttons-save updateone" disabled onclick="disableSaveButton1()">
+
+                                    <button type="button" class="myAccount__form--buttons-cancel" onclick="disableSaveButton1()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+
+                    <div class="border__line">&nbsp;</div>
+
+                    <div class="myAccount__textboxArea">
+                        <div class="myAccount__textbox">
+                            
+                            <div class="myAccount__heading--personal">
+                                <h4 class="myAccount__heading--personal-text">
+                                    Organisation details
+                                </h4>
+                            </div>
+    
+                            <p class="myAccount__para">
+                                Update your details that you use for your Organisation. Learn how we keep your data safe, view our <span class="myAccount__para--span">
+                                    <a href="/privacy" class="myAccount__para--span-link">privacy notice.</a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="myAccount__forms" oninput="enableSaveButton2()">
+                            <form action="#" class="myAccount__form">
+                                <div class="myAccount__form--group">
+                                    <label for="organisation" class="myAccount__form--label">Organisation Name</label>
+                                    <input type="text" class="myAccount__form--input CharityName" name="start" value="{{n.CharityName}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="url" class="myAccount__form--label">Website Url</label>
+                                    <input type="url" class="myAccount__form--input urlb" value="{{n.WebsiteURL}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="phone" class="myAccount__form--label">Office Phone</label>
+                                    <input type="tel" class="myAccount__form--input phone1b" value="{{n.OfficePhone}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="phone" class="myAccount__form--label">Alternate Phone</label>
+                                    <input type="tel" class="myAccount__form--input phone2b" value="{{n.AlternativePhone}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="address" class="myAccount__form--label">Address</label>
+                                    <input type="text" class="myAccount__form--input address1b" value="{{n.Address}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="address" class="myAccount__form--label">Address2</label>
+                                    <input type="text" class="myAccount__form--input address2b" value="{{n.Address2}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="city" class="myAccount__form--label">City</label>
+                                    <input type="text" class="myAccount__form--input cityb" value="{{n.City}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="postal" class="myAccount__form--label">Zip / Postal Code</label>
+                                    <input type="text" class="myAccount__form--input zipb" value="{{n.ZipPostalcode}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="region" class="myAccount__form--label">State / Province / Region</label>
+                                    <input type="text" class="myAccount__form--input stateb" value="{{n.StateProvinceRegion}}" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="country" class="myAccount__form--label">Country</label>
+                                    <input type="text" class="myAccount__form--input countryb" value="{{n.Country}}" required>
+                                </div>
+
+                                <div class="myAccount__form--buttons">
+
+                                    <input type="button" value="Save Changes" id="saveButtonSecond" class="myAccount__form--buttons-save updatethree" disabled onclick="disableSaveButton2()">
+
+                                    <button type="button" class="myAccount__form--buttons-cancel" onclick="disableSaveButton2()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+                    
+                    <div class="border__line">&nbsp;</div>
+
+                    <div class="myAccount__textboxArea">
+                        <div class="myAccount__textbox">
+                            
+                            <div class="myAccount__heading--personal">
+                                <h4 class="myAccount__heading--personal-text">
+                                    Change your password
+                                </h4>
+                            </div>
+    
+                            <p class="myAccount__para">
+                                You can change your password here. To keep your account secure, it must be at lease 12 characters long.
+                            </p>
+                        </div>
+
+                        <div class="myAccount__forms" oninput="enableSaveButton3()">
+                            <form action="#" class="myAccount__form">
+                                <div class="myAccount__form--group">
+                                    <label for="password" class="myAccount__form--label">New Password</label>
+                                    <p class="myAccount__form--passwordText">
+                                        Must be atleast 12 characters
+                                    </p>
+                                    <input type="password" name="password" id="password" class="myAccount__form--input form-control passwordUser passwordUser__input" required>
+
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="password" class="myAccount__form--label">Confirm Password</label>
+                                    <!-- <p class="myAccount__form--passwordText">
+                                        Must be atleast 12 characters
+                                    </p> -->
+                                    <input type="password" name="confirmPassword" id="confirmPassword" class="myAccount__form--input password2 form-control passwordUser passwordUser__input" required>
+
+                                    <input type="hidden" class="profileid" value="{{id}}">
+                                </div>
+
+                                <div class="myAccount__form--buttons">
+                                    <input type="button" value="Update Password" id="saveButtonThird" class="myAccount__form--buttons-save updatetwo" disabled onclick="disableSaveButton3()">
+
+                                    <button type="button" class="myAccount__form--buttons-cancel" onclick="disableSaveButton3()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+        </div>
+        
+    </main>
+
+    {{ partial('footer/backend') }}
+			
+    <!-- Jquery CDN Link -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- Font Awesome JS CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- IonIcons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        jQuery(document).ready(()=>{
+            
+            jQuery('.updateone').click(function(){
+                jQuery('.updateone').text('Updating...');
+                var CharityName = jQuery('.CharityName').val();
+                var FirstName = jQuery('.FirstName').val();
+                var LastName = jQuery('.LastName').val();
+                var EmailAddress = jQuery('.EmailAddress').val();
+                jQuery(this).addClass('is-loading');
+                console.clear();
+                console.log(CharityName+FirstName+LastName+EmailAddress);
+                if(CharityName == '' || FirstName == '' || LastName == '' || EmailAddress == '')
+                {
+                    jQuery('<div class="successMsg is-msg"  style="margin-bottom:2rem; min-width:100%"><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">Please make sure no field is empty before proceeding.</p></div>').insertAfter('.updateone');
+                    
+                    jQuery('.updateone').text('Update');
+                    setTimeout(function(){ jQuery('.is-msg').remove(); }, 3000);
+                    return;
+                }
+                
+                jQuery.ajax({
+                    type:"POST",
+                    url:'/ajax/pone',
+                    data:{CharityName:CharityName, FirstName:FirstName, LastName:LastName, EmailAddress:EmailAddress},
+                    success:function(data){
+                        console.log(data);	
+                        if(data == 'Profile details successfully updated' || data == 'Profile details successfully saved'){
+                            jQuery('.orgb').text(CharityName);
+                            jQuery('.firstb').text(FirstName);
+                            jQuery('.firstlastb').text(FirstName+' '+LastName);
+                            jQuery('.lastb').text(LastName);
+                            jQuery('.emailb').text(EmailAddress);
+                        }
+                        jQuery('<div class="successMsg is-msg"  style="margin-bottom:2rem; min-width:100%"><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">'+data+'</p></div>').insertAfter('.updateone');
+                        jQuery('.updateone').text('Update');
+                        setTimeout(function(){ jQuery('.is-msg').remove(); 
+                            jQuery('.profile__formBox--cross').click();
+                        }, 3000);
+                    }
+                });//end of ajax function
+            }); //end of clickfunction
+            
+            
+            //update second half
+            //update profile bottom part
+            jQuery('.updatethree').click(function(){
+                jQuery('.updatethree').text('Updating...');
+                var WebsiteUrl = jQuery('.WebsiteURL').val();
+                
+                function isValidURL(url) {
+                    // Regular expression for a valid URL
+                    const urlRegex = /^(https?:\/\/)?([a-zA-Z0-9]+\.)?[a-zA-Z0-9][a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\/\S*)?$/;
+                    return urlRegex.test(url);
+                }
+                
+                const isValid = isValidURL(WebsiteUrl);
+                
+                if (isValid) {
+                    console.log('url is valid');
+                } 
+                else {
+                    console.log('Url is not valid');
+                    jQuery('<div class="successMsg is-msg"  style="margin-bottom:2rem; min-width:100%"><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">Url syntax is not valid.</p></div>').insertAfter('.updatethree');
+                    
+                    jQuery('.updatethree').text('Update');
+                    setTimeout(function(){ jQuery('.is-msg').remove(); }, 3000);
+                    return;
+                }
+                
+                var OfficePhone = jQuery('.OfficePhone').val();
+                var City = jQuery('.City').val();
+                var StateProvinceRegion = jQuery('.StateProvinceRegion').val();
+                var AlternativePhone = jQuery('.AlternativePhone').val();
+                var Address = jQuery('.Address').val();
+                var Address2 = jQuery('.Address2').val();
+                var ZipPostalcode = jQuery('.ZipPostalcode').val();
+                var Country = jQuery('.Country').val();
+                if(WebsiteUrl == '' || OfficePhone == '' || City == '' || StateProvinceRegion == '' || AlternativePhone == '' || Address == '' || Address2 == '' || ZipPostalcode == '' || Country == '')
+                
+                {
+                    jQuery('<div class="successMsg is-msg"  style="margin-bottom:2rem; min-width:100%"><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">Please make sure no field is empty before proceeding.</p></div>').insertAfter('.updatethree');
+                    
+                    jQuery('.updatethree').text('Update');
+                    setTimeout(function(){ jQuery('.is-msg').remove(); }, 3000);
+                    return;
+                }	
+                jQuery.ajax({
+                    type:"POST",
+                    url:'/ajax/pthree',
+                    data:{WebsiteUrl:WebsiteUrl, OfficePhone:OfficePhone, City:City, StateProvinceRegion:StateProvinceRegion, AlternativePhone:AlternativePhone, Address:Address, Address2:Address2, ZipPostalcode:ZipPostalcode, Country:Country},
+                    success:function(data){
+                        jQuery('.updatethree').text('Update');
+                        console.log(data);	
+                        jQuery('.urlb').text(WebsiteUrl);
+                        jQuery('.phone1b').text(OfficePhone);
+                        jQuery('.cityb').text(City);
+                        jQuery('.stateb').text(StateProvinceRegion);
+                        jQuery('.phone2b').text(AlternativePhone);
+                        jQuery('.address1b').text(Address);
+                        jQuery('.address2b').text(Address2);
+                        jQuery('.zipb').text(ZipPostalcode);
+                        jQuery('.countryb').text(Country);
+                        jQuery('<div class="successMsg is-msg"  style="margin-bottom:2rem; min-width:100%"><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">'+data+'</p></div>').insertAfter('.updatethree');
+                        jQuery('.updateone').text('Update');
+                        setTimeout(function(){ jQuery('.is-msg').remove(); 
+                            jQuery('.profile__organisation--formBox--cross').click();
+                        }, 3000);
+                    }
+                });//end of ajax function
+            }); //end of clickfunction
+            
+            
+            jQuery('.updatetwo').click(function(){
+                var name = jQuery('.name').val();
+                var pwd1 = jQuery('.password1').val();
+                var pwd2 = jQuery('.password2').val();
+                var id = jQuery('.profileid').val();
+                
+                jQuery(this).addClass('is-loading');
+                if(pwd1 == pwd2) {
+                    jQuery.ajax({
+                        type:"POST",
+                        url:'/ajax/upassword',
+                        data:{name:name, pwd2:pwd2, id:id},
+                        success:function(data){
+                            console.log(data);	
+                            if(data == 'User name and password details successfully updated'){
+                                jQuery('.password1').val('');
+                                jQuery('.password2').val('');
+                            }
+                            jQuery('<div class="successMsg is-msg"  style="margin-top:1rem; "><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">'+data+'</p></div>').insertAfter('.updatetwo');
+                            jQuery('.updatetwo').text('CHANGE PASSWORD');
+                            setTimeout(function(){ jQuery('.is-msg').remove(); }, 3000);      
+                        }
+                    }); //end of ajax function
+                }
+                else {
+                    jQuery('<div class="successMsg is-msg"  style="margin-top:1rem;"><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">The passwords fields do not match</p></div>').insertAfter('.updatetwo');
+                    
+                    jQuery('.updatetwo').text('Update');	
+                    setTimeout(()=>{jQuery('.is-msg').remove();}, 3000);      
+                }
+            }); //end of clickfunction
+            jQuery('.profile__formBox--cross, .profile__organisation--formBox--cross').on('click',()=>{
+                jQuery('.profile__formBox').removeClass('profile__formBox--hidden');
+                jQuery('.profile__organisation--formBox').removeClass('profile__organisation--formBox--hidden');
+                jQuery('.overlay').removeClass('overlay__hidden');
+            });
+        });
+    </script>
+<script src="/main_branch/js/account.js"></script>		
