@@ -1,0 +1,141 @@
+
+// Import Roboto font from fonts.google.com
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+
+// variables
+$font-primary: 'Roboto', sans-serif;
+$color-body: #f2f2f2;
+$color-black: #000;
+
+// Universal Styling
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;  //10px //1rem //by default browser font-size = 16px
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+
+body{
+    line-height: 1.6;
+    font-family: $font-primary;
+
+    background-color: $color-body;
+}
+
+// Boiler plate Ends here
+
+// Mixins
+
+@mixin shadowRadius{
+    border-radius: 0.4rem;
+    box-shadow: 0 0.1rem 0.2rem rgba($color-black, 0.7);
+}
+
+
+// Container styling starts here
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    
+}
+
+.container{
+       
+    background-color: #f4f4f4;
+    padding: 12vh 20vw;
+    @include shadowRadius;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media only screen and (max-width: 600px){
+        padding: 5vh 20vw;
+    }
+
+   
+    &__content{
+        display: flex;
+        gap: 5rem;
+
+        @media only screen and (max-width: 600px){
+            flex-direction: column;
+        }
+    }
+    &__left{
+        background-color: lightcoral;
+        padding: 10vh 3.5vw;
+        @include shadowRadius;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--content{
+            display: flex;
+            gap: 1rem;
+            font-size: 1.6rem;
+            align-items: center;
+            justify-content: center;
+
+            @media only screen and (max-width: 600px){
+                flex-direction: column;
+            }
+            &-1{
+                background-color: yellow;
+                padding: 1.5vh 1.5vw;
+            }
+            &-2{
+                background-color: yellow;
+                padding: 1.5vh 1.5vw;
+            }
+            &-3{
+                background-color: yellow;
+                padding: 1.5vh 1.5vw;
+            }
+        }
+    }
+    &__right{
+        background-color: purple;
+        padding: 10vw 8vw;
+        @include shadowRadius;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--content{
+            font-size: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            &-1{
+                background-color: orangered;
+                padding: 1.5vh 1.5vw;
+            }
+            &-2{
+                background-color: orangered;
+                padding: 1.5vh 1.5vw;
+            }
+            &-3{
+                background-color: orangered;
+                padding: 1.5vh 1.5vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../formsCSS/style.css">
+    <title>Login - AdShare Marketing Template</title>
+</head>
+<body>
+
+
+    <!--============================= Header Starts Here ==========================  -->
+    <header class="header">
+        <!-- <div class="row"> -->
+         <div class="header__content">
+             <a href="../index.html">
+                 <img src="../img/logo/logo with a/logo-home.svg" alt="logo" class="logo__img--new">
+             </a>
+             <nav class="main-nav">
+                 <ul class="main-nav__list">
+                     <li class="main-nav__item">
+                         <a href="../why-adshare/index.html" class="main-nav__link">Why Adshare</a>
+                     </li>
+                     <li class="main-nav__item">
+                         <a href="../platform/index.html" class="main-nav__link">Marketing Platform</a>
+                     </li>
+                    
+                     <li class="main-nav__item main-nav__login">
+                        <a href="../signup/index.html" class="main-nav__link btn btn__login">Sign Up</a>
+                    </li>
+                    
+                 </ul>
+             </nav>
+             <button class="btn-mobile-nav">
+                 <ion-icon name="menu-outline" class="icon-mobile-nav"></ion-icon>
+                 <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
+             </button>
+         </div>
+        <!-- </div> -->
+     </header>
+     <!--============================= Header Ends Here ==========================  -->
+
+
+    <!--======================== Login content starts here ========================= -->
+
+    <main>
+        <section class="login">
+            <div class="row">
+                <div class="login__content">
+                    <div class="login__content--photo">
+                        <img src="../img/womanvector1.png" alt="womanvector1" class="login__content--photo-img">
+                    </div>
+                    <div class="login__content--textbox">
+                        <div class="login__content--textbox-heading">
+                            <h3 class="login__content--textbox-heading-text">
+                                Sign In
+                            </h3>
+                        </div>
+                        <div class="login__content--textbox-para">
+                            <p class="login__content--textbox-para-text">
+                                Welcome back! Please sign in to continue.
+                            </p>
+                        </div>
+
+                        <!--======================= Login From starts here ================== -->                        
+
+                        <form id="myyForm" class="form form__first" action="#" method="post">
+                            <div class="form__group">
+                                <label for="email" class="form__group--label">Email Address</label>
+                                <input type="email" name="email" id="email" placeholder="Yourname@yourmail.com"  required class="form__group--input">
+                                <div id="emailError" class="form__error"></div>
+                            </div>
+                            <div class="form__group">
+                                <div class="form__group--password">
+                                    <label for="password" class="form__group--label">Password</label>
+                                    <a href="../password/password.html" class="form__group--password-forgot">Forgot Password?</a>
+                                </div>
+                                <div class="profile__form--group-password">
+                                    <input type="password" name="password" id="password" required placeholder="Enter your password" class="form__group--input passwordUser passwordUser__input">
+                                    <div class="passwordUser__eye">
+                                        <ion-icon name="eye-outline" class="passwordUser__eye--icon passwordUser__eye--icon-open"></ion-icon>
+                                        <ion-icon name="eye-off-outline" class="passwordUser__eye--icon passwordUser__eye--icon-close"></ion-icon>
+                                    </div>
+                                </div>
+                                <div id="passwordError" class="form__error"></div>
+                            </div>
+                            
+                            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                            <input type="submit" value="Sign In" class="btn btn__signin">
+                            <!-- <div id="formMessage" style="display: none;"></div> -->
+                        </form> 
+                        
+                        <div class="login__content--textbox-createAccount">
+                            <p class="login__content--textbox-createAccount-text">
+                                Don't have an account?
+                                <a href="../contact2/index.html" class="login__content--textbox-createAccount-text-link">Get in Touch</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!--======================= Login Form Ends here ================== -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!--==================================== Footer starts here =============================== -->
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__copyright">
+                <p class="footer__copyright--text">
+                    &copy; 2023 AdShare Ltd
+                    &VerticalLine; Image &copy;
+                    <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+                </p>
+            </div>
+
+            <nav class="footer__navigation">
+                <ul class="footer__navigation--list">
+                    <li class="footer__navigation--item">
+                        <a href="../privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                    </li>
+                    <li class="footer__navigation--item">
+                        <a href="../terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                    </li>
+                    <li class="footer__navigation--item">
+                        <a href="../contact2/index.html" class="footer__navigation--link">get help</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+
+<!--==================================== Footer Ends here =============================== -->
+
+
+    <!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+    <!--==================================== Cookies Popup Ends Here =============================== -->
+
+
+
+
+    <!-- Jquery CDN Link -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+    <!-- Ajax Form submission -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+    
+    <!-- IonIcons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- google reCaptcha Link -->
+    <script src="../js/google-recaptcha-async/js/async-google-recaptcha.js"></script>
+    
+    <!-- Link to our script file -->
+    <script src="../js/login.js"></script>
+    
+</body>
+</html>

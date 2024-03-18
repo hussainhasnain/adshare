@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+    
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../../formsCSS/style.css">
+    <title>AdShare | Media Upload </title>
+</head>
+<body>
+    
+    <main>
+        <section class="media">
+            <div class="row">
+                    <div class="media__pagination media__pagination--text-upload">
+                        <!-- <a href="../index.html" class="media__pagination--text">Media / </a>
+                        <a href="../cid/index.html" class="media__pagination--text">Cid / </a>
+                        <a href="../year/index.html" class="media__pagination--text">Year / </a>
+                        <a href="../month/index.html" class="media__pagination--text">Month / </a>
+                        <a href="#" class="media__pagination--text">Upload</a> -->
+                        <a id="media-link" href="../index.html" class="media__pagination--text">Media / </a>
+                        <a id="cid-link" href="../cid/index.html" class="media__pagination--text">Cid / </a>
+                        <a id="year-link" href="../year/index.html" class="media__pagination--text">Year / </a>
+                        <a id="month-link" href="../month/index.html" class="media__pagination--text">Month / </a>
+                        <a id="upload-link" href="#" class="media__pagination--text">Upload</a>
+
+                    </div>
+                    <div class="photo__content">
+                        <div class="photo__content--data">
+                            <div class="photo__content--add btn__browse--again">
+                                <i class="fa-solid fa-plus icon__plus"></i>
+                            </div>
+                            <!-- <div class="photo__content--delete">
+                                <a href="#" class="btn btn__deleteAll">Delete All</a>
+                            </div> -->
+                            <a href="#" class="btn btn__selectImages">Select Image</a>
+                            <a href="#" class="btn btn__deleteSelected">Delete Selected</a>
+                        </div>
+
+                        <div class="imageDisplayContainer">
+                            <div class="imageDisplayContainer__textbox">
+                                <p class="imageDisplayContainer__textbox--text">
+                                        Currently, You have no Images in your gallery. 
+                                    <span class="imageDisplayContainer__textbox--text-span">Upload Images.</span>
+                                    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+                                    <input type="file" name="imageFile" id="imageFile" multiple>
+                                    </form>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="photo__content--upload">
+                            <div class="photo__content--back-button">
+                                <a href="../month/index.html" class="btn btn__back">
+                                    Back
+                                </a>
+                            </div>
+                            <div class="photo__content--delete">
+                                <a href="#" class="btn btn__deleteAll">Delete All</a>
+                            </div>
+                            <div class="photo__content--upload-button">
+                                <a href="#" class="btn btn__uploadAll">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    Upload
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Success and Failure Validation Sample Messages -->
+                            <div class="sample__content">
+                                
+                                <!-- Success -->
+                                <div class="successMsg">
+                                    <div class="successMsg__icon">
+                                        <i class="fa-solid fa-circle-check successMsg__icon--success"></i>
+                                    </div>
+                                    <p class="successMsg__text">
+                                        Images have been Uploaded to your gallery successfully.
+                                    </p>
+                                </div>
+                    
+                                <!-- Failure -->
+                                <!-- <div class="failureMsg">
+                                    <div class="failureMsg__icon">
+                                        <i class="fa-solid fa-circle-exclamation failureMsg__icon--failure"></i>
+                                    </div>
+                                    <p class="failureMsg__text">
+                                        Oops! There is an error creating your account.
+                                    </p>
+                                </div> -->
+                            </div>
+                        </div>
+
+
+
+                    </div>                  
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+      <!--==================================== Footer starts here =============================== -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+    <!-- Font Awesome CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- IonIcons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- JS File -->
+    <script src="upload.js"></script>
+</body>
+</html>
+
