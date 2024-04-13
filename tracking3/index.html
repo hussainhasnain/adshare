@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Selectize  -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+        integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../dashboard/css/style.css">
+
+    <title> Tracking | AdShare Marketing Dashboard</title>
+</head>
+<body class="dashboard">
+            
+    
+    <!-- Dashboard Starts Here -->
+    
+    <!--=========================== Header starts here =============================== -->
+<div class="sidebarr sidebarr__account" id="main">
+
+    <header class="header">
+        <div class="header__content">
+                <h2 class="welcome__textbox--heading-text">
+                    The Trust At - 
+                    <!-- Change the name below to toggle the map -->
+                    <span class="plan plan__style">Enterprise</span>
+                    <span class="plan__style">Plan</span>
+                </h2>
+
+            <div class="header__profileBox">
+                <div class="header__profileBox--flex">
+                    <p class="header__profileBox--flex-user">
+                        Jamshed					                   
+                    </p>
+                    <!-- <span onclick="openNav()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span> -->
+                    <span onclick="toggleSidebar()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span>
+
+                </div>
+            </div>
+        </div>
+                
+    </header>
+
+    <!--=========================== Header Ends here =============================== -->
+
+    <!--=========================== Sidebar =============================== -->
+
+       <!-- =========================== New Sidebar Starts ======================= -->
+       <div id="mySidenav" class="sidenav">
+        <a href="../dashboard/index.html">
+            <img src="../img/logo/logo with a/logo-dashboard.svg" alt="logo" class="logo__img--new">
+        </a>
+        <div class="sidenav__list">
+                <a href="../dashboard/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Dashboard
+                </a>
+                <a href="../account2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    My Account
+                </a>
+
+                <a href="../users/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Users
+                </a>
+               
+
+                <a href="../payment2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Payment Method
+                </a>
+
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex sidenav__link--active">
+                    Tracking
+                </a>
+
+                <div class="sidenav__list--item-logout">
+                    <a href="#" class="btn__logout">Logout</a>
+                </div>
+        </div>  
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd
+            </p>
+        </div>      
+    </div>
+    <!--=========================== New Sidebar Ends =============================== -->
+    <!--=========================== Sidebar Ends =============================== -->
+
+    <main class="dashboard__row">
+     <!--=========================== Tracking Page Starts Here =============================== -->   
+        <div class="tracking">
+            <!-- <div class="tracking__row"> -->
+                <div class="tracking__content">
+                    <div class="tracking__textboxArea">
+                        <div class="tracking__textbox">
+                            <div class="tracking__heading">
+                                <h3 class="tracking__heading--text">
+                                    Tracking Code
+                                    <!-- <span class="tracking__heading--text-span background-bubble color-primary">
+                                        Active
+                                    </span> -->
+                                </h3>
+                            </div>
+    
+                            <p class="tracking__para">
+                                The following JavaScript tag is needed to send tracking cookies to visitors, track and conversions, and enable chatbots. Copy the tag and paste it before the closing head tag on your site.
+                            </p>
+                        </div>
+                        <div class="tracking__buttons">
+
+
+                            <div class="updateMessage__box">
+                                <div class="updateMessage hidden">
+                                    <div class="updateMessage__content">
+                                        <div class="updateMessage__icon hidden">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                        </div>
+                                        <p class="updateMessage__text">
+                                            Domain URL is successfully updated
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tracking__buttons--left">
+                                
+                                <div class="tracking__buttons--uri">
+                                    <a href="#" class="tracking__buttons--uri-link">
+                                        Domain URL: &ThinSpace;
+                                    </a>
+                                </div>
+
+                                
+                                <div class="tracking__buttons--input">
+                                    <!-- <input type="url" class="tracking__buttons--input-link" value="" disabled onblur="checkURL(this)"> -->
+                                    <input type="url" class="tracking__buttons--input-link" value="https://www.adshare.click" disabled>
+                                </div>
+
+                                <button class="tracking__buttons--edit">
+                                    <div class="tracking__buttons--edit-icon">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </div>
+                                    Edit
+                                </button>
+
+                                <button class="tracking__buttons--update hidden">
+                                    Update
+                                </button>
+
+                            </div>
+
+                            
+                            <div class="copyMessage__box">
+                                <div class="copyMessage hidden">
+                                    <div class="copyMessage__content">
+                                        <div class="copyMessage__icon">
+                                            <i class="fa-regular fa-circle-check"></i>
+                                        </div>
+                                        <p class="copyMessage__text">
+                                            Code copied to clipboard
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="tracking__buttons--right">
+                                    
+                                <div class="tracking__buttons--code">
+                                    <a href="#" class="tracking__buttons--code-link">
+                                        Container ID: &ThinSpace;
+                                    </a>
+                                </div>
+
+                                <!-- <div class="tracking__buttons--code-para hidden"> -->
+                                <div class="tracking__buttons--code-para">
+                                    <input type="text" class="tracking__buttons--code-para-text" value="GTM- WHD684578R" id="trackingCode" disabled>
+                                </div>
+
+                                <button class="tracking__buttons--copy" onclick="trackingCodeCopy()">
+                                    <div class="tracking__buttons--copy-icon">
+                                        <i class="fa-solid fa-link"></i>
+                                    </div>
+                                    Copy
+                                </button> 
+                            </div>
+
+                            <!-- Tracking Tips Starts here  -->
+                            <div class="tracking__tips">
+                                <div class="tracking__tips--heading">
+                                    <h3 class="tracking__tips--heading-text">
+                                        Some top tips on how to add Google Tag Manager ID:
+                                    </h3>
+                                </div>
+
+                                <div class="tracking__tips--textbox">
+                                    <div class="tracking__tips--textbox-item">
+                                        <div class="tracking__tips--textbox-item-icon">
+                                            <!-- <i class="fa-solid fa-mobile-button"></i> -->
+                                            1.
+                                        </div>
+                                        <div class="tracking__tips--textbox-item-text">
+                                            <p class="tracking__tips--textbox-item-text-para">
+                                                Insert this code into the <strong>&lt;head&gt;</strong> making sure to place it on the top most range possible.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="copyMessage__box">
+                                        <div class="copyMessage__tag1 hidden">
+                                            <div class="copyMessage__content">
+                                                <div class="copyMessage__icon">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </div>
+                                                <p class="copyMessage__text">
+                                                    Code copied to clipboard
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tagManager">
+                                        
+                                        <div class="tagManager__1">
+                                            <div class="tagManager__copy tagManager__copy--icon-1">
+                                                <div class="tagManager__copy--icon" id="copyMessage1">
+                                                    <i class="fa-regular fa-copy icon__copy"></i>
+                                                </div>
+                                            </div>
+                                            <textarea name="tagManager" id="tagmanager1"class="tagManager__textArea tagManager__textArea--1" readonly>
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="tracking__tips--textbox-item">
+                                        <div class="tracking__tips--textbox-item-icon">
+                                            <!-- <i class="fa-solid fa-file-lines"></i> -->
+                                            2.
+                                        </div>
+                                        <div class="tracking__tips--textbox-item-text">
+                                            <p class="tracking__tips--textbox-item-text-para">
+                                                This code would be inserted into the <strong>&lt;body&gt;</strong> tag, immediately after step 1.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="copyMessage__box">
+                                        <div class="copyMessage__tag2 hidden">
+                                            <div class="copyMessage__content">
+                                                <div class="copyMessage__icon">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </div>
+                                                <p class="copyMessage__text">
+                                                    Code copied to clipboard
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="tagManager">
+                                        
+                                        <div class="tagManager__2">
+                                            <div class="tagManager__copy tagManager__copy--icon-2">
+                                                <div class="tagManager__copy--icon" id="copyMessage2">
+                                                    <i class="fa-regular fa-copy icon__copy"></i>
+                                                </div>
+                                            </div>
+                                            <textarea name="tagManager" id="tagmanager2"class="tagManager__textArea tagManager__textArea--2" readonly>
+                                            </textarea>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="tracking__tips--textbox-item">
+                                        <div class="tracking__tips--textbox-item-icon">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                        <div class="tracking__tips--textbox-item-text">
+                                            <p class="tracking__tips--textbox-item-text-para">
+                                                Share the same link with multiple people
+                                            </p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                    
+                            
+                            </div>
+
+                             <!-- Tracking Tips Ends here  -->
+
+                        </div>
+
+                        
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+        
+    </main>
+
+  <!--==================================== Footer starts here =============================== -->
+
+  <!-- <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd &VerticalLine; Made with
+                <i class="fa-regular fa-heart icon__heart"></i>
+                &VerticalLine; Image Credits
+                <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+            </p>
+        </div>
+
+        <nav class="footer__navigation">
+            <ul class="footer__navigation--list">
+                <li class="footer__navigation--item">
+                    <a href="../privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../contact/index.html" class="footer__navigation--link">get help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer> -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+
+<!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+<!--==================================== Cookies Popup Ends Here =============================== -->
+    <div class="overlay">
+
+    </div>
+</div>
+
+
+
+<!-- Jquery CDN Link -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!-- Jquery Selectize -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+  integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<!-- Font Awesome JS CDN Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<!-- IonIcons CDN Link -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="tracking.js"></script>
+
+</body>
+</html>
+

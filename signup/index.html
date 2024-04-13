@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../formsCSS/style.css">
+    <title>Sign Up - AdShare Marketing Platform</title>
+</head>
+<body>
+
+   <!--=========================== Header starts here =============================== -->
+<header class="header">
+    <div class="header__content">
+        <a href="../index.html">
+            <img src="../img/logo/logo with a/logo-home.svg" alt="logo" class="logo__img--new">
+        </a>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="../why-adshare/index.html" class="main-nav__link">Why Adshare</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../platform/index.html" class="main-nav__link">Marketing Platform</a>
+                </li>
+                
+                <li class="main-nav__item main-nav__login">
+                    <a href="../login/index.html" class="main-nav__link btn btn__login">Login</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="btn-mobile-nav">
+            <ion-icon name="menu-outline" class="icon-mobile-nav"></ion-icon>
+            <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
+        </button>
+    </div>
+</header>
+
+<!--=========================== Header Ends here =============================== -->
+
+    <!--=========================== Sign Up content starts here ==================== -->
+
+    <main>
+        <section class="signup">
+            <div class="row">
+                <div class="login__content signup__content">
+                    
+                    <div class="login__content--textbox signup__content--textbox">
+                        <div class="login__content--textbox-heading">
+                            <h3 class="login__content--textbox-heading-text">
+                                Create New Account
+                            </h3>
+                        </div>
+                        <div class="login__content--textbox-para">
+                            <p class="login__content--textbox-para-text">
+                                It's free to sign up and only takes a minute.
+                            </p>
+                        </div>
+
+                        <!--======================= Sign Up From starts here ================== -->
+
+                        <form id="myForm" action="#" method="post">
+                            <div class="form form__signup form__first">
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="email" class="form__group--label">Email Address</label>
+                                        <div id="emailError" class="form__error"></div>
+                                    </div>
+                                    <input type="email" name="email" id="email" placeholder="Yourname@yourmail.com"  class="form__group--input form__group--input-signup">
+                                    
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="password" class="form__group--label">Password</label>
+                                        <div id="passwordError" class="form__error"></div>
+                                    </div>
+                                    <div class="profile__form--group-password">
+                                        <input type="password" name="password" id="password" placeholder="Enter your password" class="form__group--input form__group--input-signup passwordUser passwordUser__input">
+                                        <div class="passwordUser__eye">
+                                            <ion-icon name="eye-outline" class="passwordUser__eye--icon passwordUser__eye--icon-open"></ion-icon>
+                                            <ion-icon name="eye-off-outline" class="passwordUser__eye--icon passwordUser__eye--icon-close"></ion-icon>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="firstname" class="form__group--label">Firstname</label>
+                                        <div id="firstNameError" class="form__error"></div>
+                                    </div>
+                                    <input type="text" name="firstname" id="firstname" placeholder="Enter your firstname"  class="form__group--input form__group--input-signup">
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="lastname" class="form__group--label">Lastname</label>
+                                        <div id="lastNameError" class="form__error"></div>
+                                    </div>
+                                    <input type="text" name="lastname" id="lastname" placeholder="Enter your lastname"  class="form__group--input form__group--input-signup">
+                                </div>
+                            
+                                <div class="login__content--textbox-btn">
+                                    <input type="button" value="Next Step" class="btn btn__signin btn__signUp btn__next">
+                                </div>
+                            </div>
+                            <!-- ==================== 2nd Step ==================-->
+                            <div id="myyForm" class="form form__second">
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="organisation" class="form__group--label">Organisation Name</label>
+                                        <div id="organisationError" class="form__error"></div>
+                                    </div>
+                                    <input type="text" name="charity" id="charity" placeholder="Enter organisation name"  class="form__group--input">
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="website" class="form__group--label">Website URL</label>
+                                        <div id="urlError" class="form__error"></div>
+                                    </div>
+                                    <input type="text" name="url" id="url" placeholder="Enter Website URL" class="form__group--input">
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="phone" class="form__group--label">Phone</label>
+                                        <div id="phoneError" class="form__error"></div>
+                                    </div>
+                                    <input type="tel" name="phone" id="phone" placeholder="Enter phone number" class="form__group--input">
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="country" class="form__group--label">Select your country</label>
+                                        <div id="countryError" class="form__error"></div>
+                                    </div>
+                                    <select id="country">
+                                        <option value="">-- Select a country --</option>
+                                    </select>
+                                </div>
+                                <div class="login__content--textbox-btn btn__direction">
+                                    <input type="button" value="Back" class="btn btn__signin btn__signUp btn__prev2">
+                                    <input type="button" value="Next Step" class="btn btn__signin btn__signUp btn__next2">
+                                </div>
+                            </div> 
+                            <!-- ==================== 3rd Step ==================-->
+                            <div id="myyForm3" class="form form__third">
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="address" class="form__group--label">Address</label>
+                                        <div id="address1Error" class="form__error"></div>
+                                    </div>
+                                    <input type="text" name="address1" id="address1" placeholder="Enter organisation address"  class="form__group--input">
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="city" class="form__group--label">City</label>
+                                        <div id="cityError" class="form__error"></div>
+                                    </div>
+                                    <input type="text" name="city" id="city" placeholder="Enter your city"  class="form__group--input">
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__group--flex">
+                                        <label for="postal" class="form__group--label">Postal / Zip</label>
+                                        <div id="postcodeError" class="form__error"></div>
+                                    </div>
+                                    <input type="text" name="postcode" id="postcode" placeholder="Enter your post code"  class="form__group--input">
+                                </div>
+                                <div class="form__group">
+                                    <p class="form__group--text">
+                                        By clicking <span class="form__group--text-span">
+                                            Sign Up
+                                        </span> below, you agree to our terms of service and privacy statement.
+                                    </p>
+                                </div>
+                                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                                <div class="btn__direction">
+                                    <input type="button" value="Back" class="btn btn__signUp btn__prev3">
+                                    <input type="submit" value="Sign Up" class="btn btn__signUp btn__third">
+                                </div>
+                            </div> 
+                        </form>                       
+
+                        <div class="login__content--textbox-createAccount login__content--textbox-createAccount-signUp">
+                            <p class="login__content--textbox-createAccount-text">
+                                Already have an account?
+                                <a href="../login/index.html" class="login__content--textbox-createAccount-text-link">Sign In</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="signup__content--photo">
+                        <img src="../img/signup.svg" alt="signup" class="login__content--photo-img signup__content--photo-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!--==================================== Footer starts here =============================== -->
+
+   <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd
+                &VerticalLine; Image Credits
+                <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+            </p>
+        </div>
+
+        <nav class="footer__navigation">
+            <ul class="footer__navigation--list">
+                <li class="footer__navigation--item">
+                    <a href="../privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../contact2/index.html" class="footer__navigation--link">get help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+<!--==================================== Footer Ends here =============================== -->
+
+    <!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+<!--==================================== Cookies Popup Ends Here =============================== -->
+
+<!--==================================== Footer Ends here =============================== -->
+    <!-- Jquery CDN Link -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+    <!-- Ajax Form submission -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+    
+    <!-- IonIcons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <!-- google reCaptcha Link -->
+     <script src="../js/google-recaptcha-async/js/async-google-recaptcha.js"></script>
+    
+    
+    <!-- Link to our script file -->
+    <script src="../js/signup.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Selectize  -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+        integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../dashboard/css/style.css">
+
+    <title> Tracking | AdShare Marketing Dashboard</title>
+</head>
+<body class="dashboard">
+            
+    
+    <!-- Dashboard Starts Here -->
+    
+    <!--=========================== Header starts here =============================== -->
+<div class="sidebarr sidebarr__account" id="main">
+
+
+    <header class="header">
+        <div class="header__content">
+                <h2 class="welcome__textbox--heading-text">
+                    The Trust At - 
+                    <!-- Change the name below to toggle the map -->
+                    <span class="plan plan__style">Enterprise</span>
+                    <span class="plan__style">Plan</span>
+                </h2>
+
+            <div class="header__profileBox">
+                <div class="header__profileBox--flex">
+                    <p class="header__profileBox--flex-user">
+                        Jamshed					                   
+                    </p>
+                    <!-- <span onclick="openNav()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span> -->
+                    <span onclick="toggleSidebar()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span>
+
+                </div>
+            </div>
+        </div>
+                
+    </header>
+
+
+    <!--=========================== Header Ends here =============================== -->
+
+    <!--=========================== Sidebar =============================== -->
+
+       <!-- =========================== New Sidebar Starts ======================= -->
+       <div id="mySidenav" class="sidenav">
+        <a href="../dashboard/index.html">
+            <img src="../img/logo/logo-new/logo-dashboard-new.svg" alt="logo" class="logo__img--new">
+        </a>
+        <div class="sidenav__list">
+                <a href="../dashboard/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Dashboard
+                </a>
+                <div class="sidenav__list--item ">
+                    <div class="sidenav__list--item-flex sidenav__list--item-account">
+                        <a href="#" class="sidenav__link">My Account</a>
+                        <ion-icon name="chevron-down-outline" class="icon__caret icon__caret1"></ion-icon>
+                    </div>
+                    
+                        <ul class="sidenav__list--item-list sidenav__list--item-list1 toggled">
+                            <a href="../account/index.html" class="sidenav__list--item-link">
+                                <li class="sidenav__list--item-item">
+                                    Personal
+                                </li>
+                            </a>
+                            <a href="#" class="sidenav__list--item-link">
+                                <li class="sidenav__list--item-item">
+                                    Organisation
+                                </li>
+                            </a>
+                        </ul>
+                </div>
+
+                <div class="sidenav__list--item ">
+                    <div class="sidenav__list--item-flex sidenav__list--item-users">
+                        <a href="#" class="sidenav__link">Users</a>
+                        <ion-icon name="chevron-down-outline" class="icon__caret icon__caret2"></ion-icon>
+                    </div>
+                    
+                        <ul class="sidenav__list--item-list sidenav__list--item-list2 toggled">
+                            <a href="../users/index.html" class="sidenav__list--item-link">
+                                <li class="sidenav__list--item-item">
+                                    Bob
+                                </li>
+                            </a>
+                            <a href="#" class="sidenav__list--item-link">
+                                <li class="sidenav__list--item-item">
+                                    Jessy
+                                </li>
+                            </a>
+                        </ul>
+                </div>
+               
+
+                <a href="../payment2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Payment Method
+                </a>
+
+                <div class="sidenav__list--item ">
+                    <div class="sidenav__list--item-flex sidenav__list--item-tracking">
+                        <a href="#" class="sidenav__link">Tracking+</a>
+                        <ion-icon name="chevron-down-outline" class="icon__caret icon__caret3"></ion-icon>
+                    </div>
+                    
+                        <ul class="sidenav__list--item-list sidenav__list--item-list3 toggled">
+                            <a href="#" class="sidenav__list--item-link">
+                                <li class="sidenav__list--item-item">
+                                    Active
+                                </li>
+                            </a>
+                            <a href="#" class="sidenav__list--item-link">
+                                <li class="sidenav__list--item-item">
+                                    In Active
+                                </li>
+                            </a>
+                        </ul>
+                </div>
+
+                <div class="sidenav__list--item-logout">
+                    <a href="#" class="btn__logout">Logout</a>
+                </div>
+        </div>  
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd
+            </p>
+        </div>      
+    </div>
+    <!--=========================== New Sidebar Ends =============================== -->
+    <!--=========================== Sidebar Ends =============================== -->
+
+    <main>
+     <!--=========================== Tracking Page Starts Here =============================== -->   
+        <div class="tracking">
+            <div class="tracking__row">
+                <div class="tracking__content">
+                    <div class="tracking__textbox">
+                        <div class="tracking__heading">
+                            <h3 class="tracking__heading--text">
+                                Tracking Code:
+                                <span class="tracking__heading--text-span background-bubble color-primary">
+                                    Active
+                                </span>
+                            </h3>
+                        </div>
+
+                        <div class="payment__advertiser">
+                            <div class="payment__advertiser--heading">
+                                <h3 class="payment__advertiser--heading-text">
+                                    Advertiser Block
+                                </h3>
+                            </div>
+                           
+                            <div class="trackings__list--content">
+                                <div class="trackings__list">
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--heading-text">
+                                            Status
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name text-decoration-none">
+                                        <p class="trackings__list--heading-text trackings__list--heading-text-underline text-decoration-none" >
+                                            Name 
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--heading-text">
+                                            URL
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-sort">
+                                        <div class="trackings__list--profile-icon">
+                                            <ion-icon name="swap-vertical-outline"></ion-icon>
+                                        </div>
+                                        <p class="trackings__list--heading-text trackings__list--heading-text-underline">
+                                            Country
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <p class="trackings__list--heading-text">
+                                            Tracking Started
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action trackings__list--tooltip">
+                                        <p class="trackings__list--heading-text">
+                                            Tracking Ends
+                                        </p>
+                                        <p class="trackings__list--tooltip-icon tooltip">
+                                            <ion-icon name="help-circle-outline" class="icon__tooltip"></ion-icon>
+                                            <span class="tooltiptext">Lorem ipsum dolor sit amet consecte, adipisi elit. Eaque, aspernatur.</span>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <p class="trackings__list--heading-text">
+                                            Details
+                                        </p>
+                                    </div>
+                                </div>
+        
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-1">
+                                            Orphans In Need
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-1">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+    
+    
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+    
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-2">
+                                            Orphans In Need
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-2">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-3">
+                                            Orphans In Need	
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-3">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            USA
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-failed color-failed-background">
+                                            In Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-4">
+                                            sadqah Donation	
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-4">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>		
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-5">
+                                            sadqah Donation	
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-5">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>			
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-2">
+                                            sadqah Donation	
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-2">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-2">
+                                            sadqah Donation	
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-2">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                https://www.orphansinneed.org.uk/
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            USA
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-2">
+                                            Zakat For Needy
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-2">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>	
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-2">
+                                            Zakat For Needy
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-2">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-failed color-failed-background">
+                                            In Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-2">
+                                            Zakat For Needy
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-2">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trackings__list">
+                                    <div class="trackings__list--status">
+                                        <p class="trackings__list--status-text trackings__list--status-text-1 color-paid-out color-paid-out-background">
+                                            Active
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--name">
+                                        <p class="trackings__list--name-text trackings__list--name-text-2">
+                                            Zakat For Needy
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--email">
+                                        <p class="trackings__list--email-text trackings__list--email-text-2">
+                                            <a href="https://www.orphansinneed.org.uk/" target="_blank" class="payment__list--email-text-link">
+                                                    https://www.orphansinneed.org.uk/
+                                                </a>
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-2">
+                                            GB
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            11/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--profile trackings__list--profile-edit trackings__list--action-edited text-decoration-none">
+                                        <p class="trackings__list--profile-text trackings__list--profile-text-1">
+                                            12/2023
+                                        </p>
+                                    </div>
+                                    <div class="trackings__list--action">
+                                        <div class="trackings__list--action-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                        <p class="tracking__para">
+                            The following JavaScript tag is needed to send tracking cookies to visitors, track and conversions, and enable chatbots. Copy the tag and paste it before the closing head tag on your site.
+                        </p>
+                    </div>
+                    <div class="tracking__buttons">
+                        <div class="tracking__buttons--left">
+                            <div class="tracking__buttons--textbox">
+                                <p class="tracking__buttons--textbox-text">
+                                    domain
+                                </p>
+                            </div>
+                            <div class="tracking__buttons--inputbox">
+                                <input type="text" name="domain" id="domain" class="tracking__buttons--inputbox-input" placeholder="Url Address here">
+                            </div>
+                        </div>
+                        <div class="tracking__buttons--right">
+                            <div class="tracking__buttons--left">
+                                <div class="tracking__buttons--textbox">
+                                    <p class="tracking__buttons--textbox-text">
+                                        tracking id
+                                    </p>
+                                </div>
+                                <div class="tracking__button--inputbox">
+                                    <input type="text" name="domain" id="domain" class="tracking__buttons--inputbox-input" placeholder="Your Tracking ID">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="tracking__tag">
+                        <div contenteditable="true" class="tracking__tag--input"></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+  <!--==================================== Footer starts here =============================== -->
+
+  <!-- <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd &VerticalLine; Made with
+                <i class="fa-regular fa-heart icon__heart"></i>
+                &VerticalLine; Image Credits
+                <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+            </p>
+        </div>
+
+        <nav class="footer__navigation">
+            <ul class="footer__navigation--list">
+                <li class="footer__navigation--item">
+                    <a href="../privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../contact/index.html" class="footer__navigation--link">get help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer> -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+
+<!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+<!--==================================== Cookies Popup Ends Here =============================== -->
+    <div class="overlay">
+
+    </div>
+</div>
+
+
+
+<!-- Jquery CDN Link -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!-- Jquery Selectize -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+  integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<!-- Font Awesome JS CDN Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<!-- IonIcons CDN Link -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="tracking.js"></script>
+
+</body>
+</html>
+

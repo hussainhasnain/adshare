@@ -1,0 +1,1572 @@
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 2560px){
+  .row{
+    max-width: 200rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1800px){
+  .row{
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .row {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .row {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .row {
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 24em) {
+  .row {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+/* ==================== Basic Styling =================== */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #333;
+}
+
+.upper-text {
+  text-transform: uppercase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.primary {
+  background-color: #3335CF;
+}
+
+.secondary {
+  background-color: #ff109b;
+}
+
+.tertiary {
+  background-color: #c259ff;
+}
+
+.grey-dark {
+  color: #adb5bd;
+}
+
+.color-primary {
+  color: #3335CF;
+}
+
+.color-secondary {
+  color: #ff109b;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  line-height: 1.6;
+  font-family: "IBM Plex Sans", sans-serif;
+  overflow-x: hidden;
+  color: #333;
+  height: 100%;
+}
+
+/* =================== Header starts here ======================== */
+/* =================== Logo ======================== */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.logo__firstname {
+  color: #000;
+}
+.logo__lastname {
+  color: #3335CF;
+}
+.logo:hover > .logo__firstname {
+  color: #3335CF;
+}
+.logo:hover > .logo__lastname {
+  color: #000;
+}
+
+/* =================== Navigation ======================== */
+.main-nav {
+  margin-left: auto;
+  margin-right: 4rem;
+}
+@media only screen and (max-width: 75em) {
+  .main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+}
+.main-nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 75em) {
+  .main-nav__list {
+    gap: 2rem;
+  }
+}
+
+.main-nav__list-buttons {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .main-nav__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main-nav__item {
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 75em) {
+  .main-nav__item {
+    margin-right: 0;
+  }
+}
+
+.main-nav__link {
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: 600;
+}
+@media only screen and (max-width: 75em) {
+  .main-nav__link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+}
+.main-nav__link:hover {
+  color: #3335CF;
+  transition: all 0.3s;
+}
+.nav-open .main-nav {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+  border-bottom: 1px solid #e9ecef;
+  position: relative;
+}
+
+.header__content {
+  display: flex;
+  gap: 4rem;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (max-width: 75em) {
+  .header__buttons {
+    flex-direction: column;
+  }
+}
+.profile-open .header__profile--content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: all 0.3s;
+}
+.icon-search-close {
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.msg-open .header__icons--box-notify-list,
+.notification-open .header__icons--box-notify-list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: all 0.3s;
+}
+
+.search-open .header__search {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: all 0.3s ease-in;
+}
+/* =============== Mobile Navigation=============== */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.icon-mobile-nav {
+  font-size: 2.8rem;
+}
+
+.icon-mobile-nav[name=close-outline] {
+  display: none;
+}
+
+.nav-open .btn-mobile-nav {
+  color: #fff;
+}
+
+.nav-open .icon-mobile-nav[name=close-outline] {
+  display: block;
+}
+
+.nav-open .icon-mobile-nav[name=menu-outline] {
+  display: none;
+}
+
+.btn-mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  .btn-mobile-nav {
+    display: block;
+  }
+}
+/* =================== Icons ======================== */
+.icon {
+  cursor: pointer;
+}
+.icon:hover {
+  color: #ff109b;
+  transition: all 0.3s;
+}
+.icon__search {
+  font-size: 1.8rem;
+}
+.icon__msg {
+  font-size: 1.8rem;
+}
+.icon__bell {
+  font-size: 1.8rem;
+}
+.icon__arrowUp {
+  margin-right: 0.4rem;
+}
+.icon__arrowDown {
+  margin-right: 0.6rem;
+}
+
+.icon__chart {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.icon__download {
+  font-size: 6rem;
+  color: #e9ecef;
+}
+.icon__refresh {
+  font-size: 2.7rem;
+  color: #adb5bd;
+  font-weight: 600;
+}
+.icon__dots {
+  font-size: 2.7rem;
+  color: #adb5bd;
+}
+.icon__tick {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+.icon__heart {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #eb2323;
+}
+.icon__customers {
+  font-size: 2rem;
+  color: #e9ecef;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+.icon__profile {
+  font-size: 1.3rem;
+}
+.icon__circle {
+  font-size: 1rem;
+  margin-right: 0.3rem;
+}
+.icon__circle--green {
+  color: #51ff00;
+}
+.icon__circle--red {
+  color: #eb2323;
+}
+
+/* =================== Buttons ======================== */
+.btn {
+  display: inline-block;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 1.3rem 5rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.btn__login {
+  background-color: #3335CF;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+.btn__login:hover {
+  background-color: #010674;
+  transition: all 0.3s;
+  color: #fff;
+}
+.btn__signup {
+  background-color: #ff109b;
+  transition: all 0.3s;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.btn__signup:hover {
+  background-color: #c62f78;
+  transition: all 0.3s;
+}
+.btn__email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #adb5bd;
+  border-radius: 0.4rem;
+}
+.btn__print {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #adb5bd;
+  border-radius: 0.4rem;
+}
+.btn__report {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #adb5bd;
+  border-radius: 0.4rem;
+  background-color: #3335CF;
+  color: #fff;
+}
+.btn__report:hover {
+  background-color: #010674;
+  transition: all 0.3s;
+}
+.btn__range {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+  background-color: #dee2e6;
+}
+.btn__period {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+}
+.btn__signin {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  background-color: #3335CF;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+
+}
+.btn__signin:hover {
+  background-color: #010674;
+  transition: all 0.3s;
+}
+
+.btn__signUp {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  background-color: #3335CF;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.btn__signUp:hover {
+  background-color: #010674;
+  transition: all 0.3s;
+}
+
+.btn__facebook {
+  text-align: center;
+  color: #3b5998;
+  width: 100%;
+  border: 1px solid #3b5998;
+  border-radius: 0.4rem;
+}
+.btn__facebook:hover {
+  background-color: #3b5998;
+  transition: all 0.3s;
+  color: #fff;
+}
+.btn__facebook--signUp {
+  width: 100%;
+}
+.btn__twitter {
+  text-align: center;
+  color: #1D9BF0;
+  width: 100%;
+  border: 1px solid #1D9BF0;
+  border-radius: 0.4rem;
+}
+.btn__twitter:hover {
+  background-color: #1D9BF0;
+  transition: all 0.3s;
+  color: #fff;
+}
+.btn__twitter--signUp {
+  width: 100%;
+}
+.btn__reset {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  background-color: #3335CF;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+  margin-left: 1rem;
+}
+.btn__reset:hover {
+  background-color: #010674;
+  transition: all 0.3s;
+}
+
+/* =================== Header Ends here ======================== */
+/* =================== Section Welcome starts here ======================== */
+.welcome {
+  padding: 3rem 0;
+}
+.welcome__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .welcome__content {
+    flex-direction: column;
+  }
+}
+
+.welcome__textbox {
+  flex: 50%;
+}
+.welcome__textbox--breadcrumb-link {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.welcome__textbox--breadcrumb-link-active {
+  color: #3335CF;
+}
+
+.welcome__textbox--heading {
+  margin-top: 0.5rem;
+}
+.welcome__textbox--heading-text {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.welcome__buttons {
+  flex: 50%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+}
+.welcome__buttons--content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcome__buttons--text {
+  font-size: 1.1rem;
+  color: #adb5bd;
+}
+.welcome__buttons--text:hover {
+  color: #000;
+  transition: all 0.3s;
+}
+.welcome__buttons--text-report {
+  color: #fff;
+}
+.welcome__buttons--text-report:hover {
+  color: #fff;
+}
+
+/* =================== Section Welcome Ends here ======================== */
+
+/* =================== Section Stats starts here ======================== */
+.stats__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0.8rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .stats__content {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
+.stats__box {
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+}
+.stats__box--textContent {
+  padding: 2rem;
+}
+
+.stats__box--heading-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.stats__box--heading-text-span {
+  text-transform: lowercase;
+}
+
+.stats__box--text {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.stats__box--text-percentage {
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.stats__box--text-txt {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #adb5bd;
+}
+.stats__box--text-txt-span-green {
+  color: green;
+}
+.stats__box--text-txt-span-red {
+  color: red;
+}
+.stats__box--graph {
+  height: 100%;
+}
+
+/* =================== Section Stats Ends here ======================== */
+/* =================== Section Account starts here ======================== */
+.account {
+  margin-top: 2rem;
+}
+.account__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .account__content {
+    flex-direction: column;
+  }
+}
+.account__box--2 {
+  padding: 1.2rem 0;
+}
+.account__box--heading {
+  padding: 1rem;
+}
+.account__box--heading-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.account__box--content {
+  display: flex;
+  justify-content: space-between;
+}
+.account__box--content-box {
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.account__box--content-box-price {
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+
+.account__box--content-box-text {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.account__box--content-box-text-blue {
+  color: #3335CF;
+}
+.account__box--content-box-text-red {
+  color: #ff109b;
+}
+.account__box--content-box-para {
+  font-size: 1.2rem;
+  color: #adb5bd;
+}
+.account__box--content-box-para-link {
+  color: #3335CF;
+}
+.account__box--1 {
+  flex: 70%;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+}
+.account__box--2 {
+  flex: 50%;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+}
+.apexcharts-legend {
+  position: absolute;
+  top: -5rem; /* Adjust the top position as needed */
+  right: 100%;
+  transform: translateX(50%);
+  transform: translateY(-10%);
+}
+
+/* =================== Section Account Ends here ======================== */
+/* =================== Section Sales starts here ======================== */
+.sales {
+  margin-top: 2rem;
+}
+.sales__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+@media only screen and (max-width: 75em) {
+  .sales__content {
+    flex-direction: column;
+  }
+}
+.sales__map {
+  flex: 38%;
+  border: 1px solid #e9ecef;
+}
+@media only screen and (max-width: 75em) {
+  .sales__map {
+    order: 1;
+    flex: 100%;
+    width: 100%;
+  }
+}
+.sales__map--heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+.sales__map--heading-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.sales__map--heading-location {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.sales__map--heading-location-name {
+  font-size: 1.2rem;
+  color: #adb5bd;
+}
+.sales__map--map {
+  width: 100%;
+  min-height: 20rem;
+}
+.sales__map--container {
+  padding: 2rem;
+}
+.sales__map--stats-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+  line-height: 2.5;
+  text-align: center;
+}
+.sales__map--stats-content-item-heading {
+  font-size: 1.3rem;
+  color: #adb5bd;
+  text-transform: uppercase;
+}
+.sales__map--stats-content-item-name {
+  font-size: 1.2rem;
+}
+.sales__stats {
+  flex: 77%;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+}
+@media only screen and (max-width: 75em) {
+  .sales__stats {
+    order: 0;
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.sales__stats--headingArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sales__stats--headingArea-heading-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.sales__stats--headingArea-heading-para {
+  font-size: 1.2rem;
+  color: #adb5bd;
+}
+.sales__stats--summary {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #e9ecef;
+}
+@media only screen and (max-width: 62.5em) {
+  .sales__stats--summary {
+    flex-direction: column;
+  }
+}
+
+.sales__stats--summary-item {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+}
+.sales__stats--summary-item-icon {
+  padding: 1.4rem 2rem;
+  border-radius: 0.4rem;
+}
+.sales__stats--summary-item-content {
+  line-height: 1.4;
+}
+.sales__stats--summary-item-content-text {
+  font-size: 1.3rem;
+  color: #adb5bd;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.sales__stats--summary-item-content-amount {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.sales__stats--content {
+  text-align: center;
+}
+.sales__stats--content-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+  padding: 0.5rem 0;
+}
+
+.sales__stats--content-item-1 {
+  justify-content: space-evenly;
+}
+
+.sales__stats--content-item-2 {
+  justify-content: space-around;
+}
+.sales__stats--content-item-heading {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.sales__stats--content-item-heading-custom {
+  transform: translateX(-1.4rem);
+}
+.sales__stats--content-item-data {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.sales__stats--download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+.sales__stats--download-icon {
+  flex: 15%;
+}
+.sales__stats--download-content-heading {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.sales__stats--download-content-para {
+  font-size: 1.4rem;
+  color: #adb5bd;
+  margin-top: 1rem;
+}
+
+/* =================== Section Sales Ends here ======================== */
+/* =================== Section Customers starts here ======================== */
+.customers {
+  margin-top: 2rem;
+}
+.customers__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .customers__content {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
+}
+
+.customers__content--box {
+  border: 1px solid #e9ecef;
+}
+
+.customers__content--box-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem;
+}
+
+.customers__content--box-heading-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.customers__content--box-heading-icons {
+  display: flex;
+  gap: 1rem;
+}
+@media only screen and (max-width: 75em){
+  .customers__content--box{
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 8rem;
+    align-items: center;
+    justify-content: space-between;
+  }  
+}
+
+@media only screen and (max-width: 62.5em){
+  .customers__content--box{
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 7rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.customers__content--box-item {
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.customers__content--box-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.customers__content--box-item-left-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customers__content--box-item-left-text-heading {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.customers__content--box-item-left-text-para {
+  font-size: 1.2rem;
+  color: #adb5bd;
+}
+
+.customers__content--box-item-left-img {
+  border-radius: 50%;
+}
+
+.customers__content--box-item-right-text-heading {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.customers__content--box-item-right-text-para {
+  font-size: 1.2rem;
+}
+.customers__content--box-item-right-text-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.customers__content--box-item-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customers__content--box-item-view-text {
+  color: #adb5bd;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.customers__content--box-3-content-textbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.customers__content--box-3-content-textbox-total-amount {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-family: "Rubik", sans-serif;
+}
+.customers__content--box-3-content-textbox-total-amount-span {
+  font-size: 1.2rem;
+}
+
+.customers__content--box-3-content-textbox-total-text {
+  text-transform: uppercase;
+  color: #adb5bd;
+  font-size: 1.1rem;
+}
+
+.customers__content--box-3-content-textbox-daily-amount {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.customers__content--box-3-content-textbox-daily-amount-span {
+  font-size: 1.2rem;
+}
+.customers__content--box-3-content-textbox-daily-text {
+  text-transform: uppercase;
+  color: #adb5bd;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* =================== Section Customers Ends here ======================== */
+/* ============================ Footer starts here ======================== */
+.footer {
+  padding: 1.8rem;
+  border-top: 1px solid #e9ecef;
+  bottom: 0;
+}
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer__content {
+    flex-direction: column;
+  }
+}
+.footer__copyright--text {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #adb5bd;
+}
+.footer__copyright--link {
+  color: #adb5bd;
+}
+.footer__copyright--link:hover {
+  color: #3335CF;
+  transition: all 0.3s;
+}
+.footer__navigation--list {
+  display: flex;
+  gap: 1rem;
+}
+.footer__navigation--link {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #adb5bd;
+}
+.footer__navigation--link:hover {
+  color: #3335CF;
+  transition: all 0.3s;
+}
+
+/* ============================ Footer Ends here ======================== */
+/* ============================ Login Page starts here ======================== */
+.login {
+  padding: 9rem 0;
+  /* height: 90vh; */
+  min-height: calc(100vh - 60px); /* Subtract the footer height from the viewport height */
+}
+
+@media only screen and (max-width: 2560px){
+  .login{
+    padding: 10rem 0 0 0;
+  }
+}
+@media only screen and (max-width: 1800px){
+  .login{
+    padding: 4rem 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .login {
+    padding: 5rem 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .login {
+    padding: 5rem 5rem;
+  }
+}
+.login__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.login__content--photo {
+  flex: 60%;
+}
+@media only screen and (max-width: 62.5em) {
+  .login__content--photo {
+    display: none;
+  }
+}
+
+.login__content--photo-img {
+  height: 45rem;
+}
+@media only screen and (max-width: 2560px){
+  .login__content--photo-img{
+    height: auto;
+  }
+}
+.login__content--textbox {
+  flex: 40%;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .login__content--textbox {
+    width: 70%;
+  }
+}
+.login__content--textbox-heading-text {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.login__content--textbox-para {
+  margin-bottom: 4rem;
+}
+.login__content--textbox-para-text {
+  font-size: 1.5rem;
+  color: #adb5bd;
+  font-weight: 400;
+}
+.login__content--textbox-btn {
+  margin-top: 2rem;
+}
+
+.login__content--textbox-or-text {
+  margin: 1rem 0 2rem 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #adb5bd;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.login__content--textbox-or-text:before {
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e9ecef;
+  margin-right: 1rem;
+}
+.login__content--textbox-or-text:after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e9ecef;
+  margin-left: 1rem;
+}
+.login__content--textbox-or-text-signup {
+  display: flex;
+  justify-content: center;
+}
+
+.login__content--textbox-or-text-signup:before {
+  display: inline-block;
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: #e9ecef;
+  margin-right: 1rem;
+}
+
+.login__content--textbox-or-text-signup:after {
+  display: inline-block;
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: #e9ecef;
+  margin-left: 1rem;
+}
+.login__content--textbox-facebook {
+  margin-top: 2rem;
+}
+.login__content--textbox-twitter {
+  margin-top: 1rem;
+}
+.login__content--textbox-createAccount {
+  text-align: center;
+  transform: translateX(3rem);
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.login__content--textbox-createAccount-text-link {
+  color: #3335CF;
+}
+.login__content--textbox-createAccount-signUp {
+  text-align: center;
+  transform: translateX(-3.5rem);
+}
+
+/* ============================ Login Page Ends here ======================== */
+/* ============================ Sign Up starts here ======================== */
+.signup {
+  padding: 9rem 0;
+  min-height: 90vh;
+}
+@media only screen and (max-width: 1800px){
+  .signup{
+    padding: 0 0 0 0;
+  }
+}
+.signup__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 2560px){
+  .signup__content{
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .signup__content--textbox {
+    width: 100%;
+    padding: 0 5vw;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .signup__content--photo {
+    display: none;
+  }
+}
+.signup__content--photo-img {
+  height: 60rem;
+}
+@media only screen and (max-width: 2560px){
+  .signup__content--photo-img{
+    height: auto;
+  }
+}
+/* ============================ Sign Up Ends here ======================== */
+/* ============================ Login Form starts here ======================== */
+
+.form__second{
+  display: none;
+}
+
+.form > * {
+  margin-top: 2rem;
+}
+.form__group--label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #000;
+}
+.form__group--input {
+  padding: 0.9rem 0 0.9rem 0.5rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+.form__group--input-signup {
+  width: 100%;
+}
+.form__group--password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__group--password-forgot {
+  font-size: 1.2rem;
+  color: #3335CF;
+}
+.form__group--text {
+  font-size: 1.4rem;
+  padding: 0 5vw 0 0;
+}
+.form__group--text-span {
+  font-weight: 600;
+}
+
+.form__group--input:-moz-placeholder-shown {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.form__group--input:placeholder-shown {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* ============================ Login Form Ends here ======================== */
+/* ============================ Forgot Password Page starts here ======================== */
+.password {
+  padding: 9rem 0;
+  height: 90vh;
+}
+@media only screen and (max-width: 2560px){
+  .password{
+    padding: 10rem 0;
+  }
+}
+@media only screen and (max-width: 1800px){
+  .password{
+    padding: 4rem 0 0 0;
+  }
+}
+
+.password__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.password__content > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.password__photo--img {
+  height: 20rem;
+}
+@media only screen and (max-width: 2560px){
+  .password__photo--img{
+    height: 60rem;
+  }
+}
+@media only screen and (max-width: 1800px){
+  .password__photo--img{
+    height: 30rem;
+  }
+}
+
+.password__heading--text {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.password__para--text {
+  font-size: 1.4rem;
+  color: #adb5bd;
+  padding: 0 35vw;
+  text-align: center;
+}
+@media only screen and (max-width: 62.5em) {
+  .password__para--text {
+    padding: 0 30vw;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .password__para--text {
+    padding: 0 20vw;
+  }
+}
+@media only screen and (max-width: 24em) {
+  .password__para--text {
+    padding: 0 10vw;
+  }
+}
+.password__form--content {
+  display: flex;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 37.5em) {
+  .password__form--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    justify-content: center;
+  }
+}
+.password__form--content-input {
+  display: inline-block;
+  padding: 1.3rem 4.5rem 1.3rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+}
+.password__form--content-input::-moz-placeholder {
+  color: #adb5bd;
+  overflow: visible;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.password__form--content-input::placeholder {
+  color: #adb5bd;
+  overflow: visible;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.password__form--content-input:focus {
+  outline: 2px solid #3335CF;
+}
+
+.password__form--content-input:-moz-placeholder-shown {
+  font-family: "IBM Plex Sans", sans-serif;
+  display: inline-block;
+  padding: 1.3rem 6.5rem 1.3rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+  color: #adb5bd;
+  overflow: visible;
+}
+.password__form--content-input:placeholder-shown {
+  font-family: "IBM Plex Sans", sans-serif;
+  display: inline-block;
+  padding: 1.3rem 6.5rem 1.3rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.4rem;
+  color: #adb5bd;
+  overflow: visible;
+}
+/* ============================ Forgot Password Page Ends here ======================== */
+/* ============================ Form Validation ======================== */
+#formMessage {
+  background-color: #51ff00;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#emailError {
+  font-size: 1.2rem;
+  color: #eb2323;
+}
+
+#passwordError {
+  font-size: 1.2rem;
+  color: #eb2323;
+}
+
+#firstNameError {
+  font-size: 1.2rem;
+  color: #eb2323;
+}
+
+#lastNameError {
+  font-size: 1.2rem;
+  color: #eb2323;
+}
+
+.dashboard {
+  color: #000;
+}
+
+/* ============================ Cookies PopUp ======================== */
+#cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  display: none;
+}
+#cookie-popup > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+#cookie-popup p {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+#cookie-popup button {
+  display: inline-block;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 1.3rem 5rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #3335CF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__cookies {
+  color: #fff;
+}
+.btn__cookies:hover {
+  color: #ff109b;
+  transition: all 0.3s;
+}/*# sourceMappingURL=style.css.map */
+
+#country{
+  padding: 0.9rem 0 0.9rem 0.5rem;
+  width: 100%;
+  color: #333;
+  border-color: #e9ecef;
+}
+.footer__bottom{
+  height: 6rem;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+@media only screen and (max-width: 600px){
+  .footer__bottom{
+    position: static;
+  }
+}

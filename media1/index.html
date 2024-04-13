@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Digital Marketing & Growth Marketing Platform | AdShare </title>
+</head>
+<body>
+    
+    <main>
+        <section class="media">
+            <div class="row">
+                <div class="media__content">
+                    <div class="media__container">
+                        <div class="media__heading">
+                            <h3 class="media__heading--text">
+                                upload images
+                            </h3>
+                        </div>
+                        <div class="media__para">
+                            <p class="media__para--text">
+                                Please upload images you want to add to your gallery
+                            </p>
+                        </div>
+                        <div class="media__drop">
+                            <div class="media__drop--textbox">
+                                    <a href="media/" class="btn btn__browse">
+                                        
+                                        <p class="btn__browse--text">Upload Images</p>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Import -->
+
+
+                    <div class="import__container">
+                        <div class="row">
+                            <div class="import__container__content">
+                                <h1 class="heading-primary hero__textbox--heading import__heading">
+                                    Import Data
+                                </h1>
+                                <form action="https://adshare.click/import" method="post" enctype="multipart/form-data" class="marketing__textbox--para" id="uploadForm">
+                                    <label for="fileToUpload" class="upload-label">Select CSV file to upload:</label>
+                                    <input type="file" name="fileToUpload" id="fileToUpload" accept=".csv" required="">
+                                </form>
+                                <div class="button-group">
+                                    <button class="action-button upload__button" name="submit" id="myForm">Upload CSV</button>
+                                    <button class="logout-button" onclick="logout()">Logout</button>
+                                </div>
+                                <div class="upload__error"></div>
+                                <div class="upload__success"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+      <!--==================================== Footer starts here =============================== -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+    <!-- Font Awesome CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- IonIcons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- JS File -->
+    <script src="media.js"></script>
+</body>
+</html>
+

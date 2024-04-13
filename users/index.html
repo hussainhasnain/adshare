@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Apex Charts CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.min.css">
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../dashboard/css/style.css">
+
+    <title>Users | AdShare Marketing Dashboard</title>
+</head>
+<body class="dashboard">
+            
+    
+    <!-- Dashboard Starts Here -->
+    
+    <!--=========================== Header starts here =============================== -->
+<div class="sidebarr sidebarr__account" id="main">
+
+
+    <header class="header">
+        <div class="header__content">
+                <h2 class="welcome__textbox--heading-text">
+                    The Trust At - 
+                    <!-- Change the name below to toggle the map -->
+                    <span class="plan plan__style">Enterprise</span>
+                    <span class="plan__style">Plan</span>
+                </h2>
+
+            <div class="header__profileBox">
+                <div class="header__profileBox--flex">
+                    <p class="header__profileBox--flex-user">
+                        Jamshed					                   
+                    </p>
+                    <!-- <span onclick="openNav()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span> -->
+                    <span onclick="toggleSidebar()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span>
+
+                </div>
+            </div>
+        </div>
+                
+    </header>
+
+
+    <!--=========================== Header Ends here =============================== -->
+
+    <!--=========================== Sidebar =============================== -->
+        <!-- =========================== New Sidebar Starts ======================= -->
+        <div id="mySidenav" class="sidenav">
+            <a href="../dashboard/index.html">
+                <img src="../img/logo/logo with a/logo-dashboard.svg" alt="logo" class="logo__img--new">
+            </a>
+            <div class="sidenav__list">
+                    <a href="../dashboard/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                        Dashboard
+                    </a>
+                    <a href="../account2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                        My Account
+                    </a>
+    
+                    <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex sidenav__link--active">
+                        Users
+                    </a>
+                   
+    
+                    <a href="../payment2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                        Payment Method
+                    </a>
+    
+                    <a href="../tracking3/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                        Tracking
+                    </a>
+    
+                    <div class="sidenav__list--item-logout">
+                        <a href="#" class="btn__logout">Logout</a>
+                    </div>
+            </div>  
+            <div class="footer__copyright">
+                <p class="footer__copyright--text">
+                    &copy; 2023 AdShare Ltd
+                </p>
+            </div>      
+        </div>
+        <!--=========================== New Sidebar Ends =============================== -->
+
+    <main class="dashboard__row">
+     <!--=========================== Users Starts Here =============================== -->   
+        <section class="users">
+            <div class="users__content">
+                <!-- <div class="users__content--row"> -->
+                    <div class="users__data">
+                        <div class="users__add--heading">
+                            <h3 class="users__add--heading-text">
+                                Users
+                            </h3>
+                        </div>
+                        <div class="users__add">
+
+                            <div class="users__add--filters">
+                                <div class="users__add--filter">
+                                    <div class="users__add--filter-icon">
+                                        <i class="fa-solid fa-filter"></i>
+                                    </div>
+                                    <!-- <p class="users__add--filter-text">
+                                        Filter
+                                    </p> -->
+                                    <p class="users__add--filter-result">
+                                        (224 results)
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="users__add--content">
+                                    <p class="users__add--content-icon">
+                                        <i class="fa-solid fa-download"></i>
+                                    </p>
+                                    <p class="users__add--text">
+                                        Add User
+                                    </p>
+                            </div>
+                            <div class="users__add--permissions-container">
+                                <p class="users__add--permissions-container-icon">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </p>
+                                <a class="users__add--permissions" href="../permissions/index.html">
+                                    Permissions
+                                </a>
+                            </div>
+                        </div>
+                        <div class="users__list--content">
+                            <div class="users__list">
+                                <div class="users__list--email">
+                                    <p class="users__list--heading-text">
+                                        Status
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--heading-text users__list--heading-text-underline" >
+                                        Name 
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--heading-text">
+                                        Email
+                                    </p>
+                                </div>
+                                <div class="users__list--profile" id="users__list--profile-sort">
+                                    <div class="users__list--profile-icon">
+                                        <ion-icon name="swap-vertical-outline"></ion-icon>
+                                    </div>
+                                    <p class="users__list--heading-text users__list--heading-text-underline">
+                                        Profile
+                                    </p>
+                                </div>
+                                <div class="users__list--action">
+                                    <p class="users__list--heading-text">
+                                        Action
+                                    </p>
+                                </div>
+                                <div class="users__list--action">
+                                    <p class="users__list--heading-text">
+                                        Action
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <p class="users__list--heading-text">
+                                        Details
+                                    </p>
+                                </div> -->
+                            </div>
+    
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-1">
+                                        Bob Burnquist
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-1">
+                                        test@vokuro.com
+                                    </p>
+                                </div>
+                                <div class="users__list--profile" id="userProfile1">
+                                    <p class="users__list--profile-text users__list--profile-text-1">
+                                        Administrator
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-1">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-1">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+    
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-3">
+                                        Yukimi Nagano	
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-3">
+                                        yukimi@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-3">
+                                        Digital
+                                    </p>
+                                </div>
+                                <div class="users__list--profile  users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-3">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile  users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-3">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+    
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-activated color-activated-background">
+                                        Activated
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-4">
+                                        tech	
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-4">
+                                        tech@hotmail.com		
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-4">
+                                        Copywriting
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-4">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-4">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+    
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-5">
+                                        David
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-5">
+                                        zeeshandurrani99@hotmail.com			
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-5">
+                                        Copywriting
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-5">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-5">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-activated color-activated-background">
+                                        Activated
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="users__list">
+                                <div class="users__list--status">
+                                    <p class="users__list--status-text users__list--status-text-1 color-disabled color-disabled-background">
+                                        Disabled
+                                    </p>
+                                </div>
+                                <div class="users__list--name">
+                                    <p class="users__list--name-text users__list--name-text-2">
+                                        Veronica
+                                    </p>
+                                </div>
+                                <div class="users__list--email">
+                                    <p class="users__list--email-text users__list--email-text-2">
+                                        veronica@phalconphp.com	
+                                    </p>
+                                </div>
+                                <div class="users__list--profile">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Development
+                                    </p>
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-edited">
+                                    <!-- <p class="users__list--profile-text users__list--profile-text-2">
+                                        Edit
+                                    </p> -->
+
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+
+                                </div>
+                                <div class="users__list--profile users__list--profile-edit users__list--action-deleteForm">
+                                    <p class="users__list--profile-text users__list--profile-text-2">
+                                        Delete
+                                    </p>
+                                </div>
+                                <!-- <div class="users__list--action">
+                                    <div class="users__list--action-icon">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============= Edit User Box ============-->
+                    <div class="overlay">
+
+                    </div>
+                    <div class="profile__formBox profile__formBox--editUsers">
+                        <span class="profile__formBox--cross">&times;</span>
+                        <form action="#" method="post" class="profile__form">
+                            <div class="profile__form--group">
+                                <h3 class="profile__formBox--heading">
+                                    Edit User
+                                </h3>
+                                <div class="editUserValidation is-msg hidden"><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">Please use correct email syntax like abc@default.com</p></div>
+                            </div>
+                            <div class="editUser__validation">
+
+                            </div>
+                            <div class="profile__formBox--content">
+                                
+                                <div class="profile__formBox--content-flex">
+                                    <div class="profile__form--group profile__formBox--content-flex-1">
+                                        <label for="firstname" class="profile__form--group-label">User Name</label>
+                                        <input type="text"name="firstname" id="firstname" class="name profile__form--group-input" required >
+                                    </div>
+                                    
+                                    <div class="profile__form--group profile__formBox--content-flex-2">
+                                        <label for="email" class="profile__form--group-label">User Email</label>
+                                        <input type="email" name="email" id="email" class="email profile__form--group-input" required>
+                                    </div>
+                                    <!-- <span id="emailError"></span> -->
+                                </div>
+
+                                <div class="profile__formBox--content-panel">
+                                    <div class="profile__form--group">
+                                        <label for="profile" class="profile__form--group-label">Profile</label>
+                                          <div class="dropdown-wrapper dropdown-wrapper__users">
+                                            <span class="dropdown__span dropdown__span--users">Choose your Profile</span>
+                                            <ul class="dropdown-list" id="profileDropdown profile">
+                                                <li><a href="#" data-profile="1">Administrator</a></li>
+                                                <li><a href="#" data-profile="2">Manager</a></li>
+                                                <li><a href="#" data-profile="3">Read Only</a></li>
+                                                <li><a href="#" data-profile="4">Finance</a></li>
+                                                <li><a href="#" data-profile="5">Development</a></li>
+                                                <li><a href="#" data-profile="6">Digital</a></li>
+                                                <li><a href="#" data-profile="7">Copywriting</a></li>
+                                                <li><a href="#" data-profile="7">Copywriting</a></li>
+                                                <li><a href="#" data-profile="7">Copywriting</a></li>
+                                                <li><a href="#" data-profile="7">Copywriting</a></li>
+                                                <li><a href="#" data-profile="7">Copywriting</a></li>
+                                                <li><a href="#" data-profile="7">Copywriting</a></li>
+                                                <li><a href="#" data-profile="7">1</a></li>
+                                                <li><a href="#" data-profile="7">2</a></li>
+                                                <li><a href="#" data-profile="7">3</a></li>
+                                                <li><a href="#" data-profile="7">4</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="profile__form--group">
+                                        <label for="profile" class="profile__form--group-label">Suspended?</label>
+                                        <div class="dropdown-wrapper dropdown-wrapper__users">
+                                            <span class="dropdown__span dropdown__span--users" id="suspended">Choose your Profile</span>
+                                            <ul class="dropdown-list">
+                                                <li><a href="#" data-profile="1">Y</a></li>
+                                                <li><a href="#" data-profile="2">N</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile__form--group">
+                                        <label for="profile" class="profile__form--group-label">Banned?</label>
+                                        <div class="dropdown-wrapper dropdown-wrapper__users">
+                                            <span class="dropdown__span dropdown__span--users" id="banned">Choose your Profile</span>
+                                            <ul class="dropdown-list">
+                                                <li><a href="#" data-profile="1">Y</a></li>
+                                                <li><a href="#" data-profile="2">N</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile__form--group">
+                                        <label for="profile" class="profile__form--group-label">Confirmed?</label>
+                                        <!-- <select id="confirmed">
+                                            <option value="1">Yes</option>
+                                            <option value="2">No</option>
+                                        </select> -->
+                                        <div class="dropdown-wrapper dropdown-wrapper__users">
+                                            <span class="dropdown__span dropdown__span--users" id="activeToggle">Choose your Profile</span>
+                                            <ul class="dropdown-list">
+                                                <li><a href="#" data-profile="1">Y</a></li>
+                                                <li><a href="#" data-profile="2">N</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input type="button" value="save" class="btn btn__save">
+                                </div>
+
+                                <div class="profile__formBox--content-panel">
+                                    <div class="profile__form--group">
+                                        <div class="profile__form--group-tooltip">
+                                            <label for="profile" class="profile__form--group-label">Change User Password <span class="editUser__span">(eg : Default123!**)</span></label>
+                                            <p class="profile__form--group-tooltip-para user__tooltip">
+                                                <ion-icon name="help-circle-outline" class="icon__tooltip"></ion-icon>
+                                                <span class="user__tooltiptext">The password must be a minimum of 12 characters in length, containing at least one uppercase letter and one special character, such as Ex@mple123!**</span>
+                                            </p>
+                                       </div>
+                                           
+                                            <div class="editUser__password">
+                                                <input type="password" name="start" id="start" class="epassword profile__form--group-input passwordUser__input" value="" placeholder="Change password">
+                                                    <!-- Hide and show password -->
+     
+                                                <div class="passwordUser__eye">
+                                                     <ion-icon name="eye-outline" class="passwordUser__eye--icon passwordUser__eye--icon-open"></ion-icon>
+                                                     <ion-icon name="eye-off-outline" class="passwordUser__eye--icon passwordUser__eye--icon-close"></ion-icon>
+                                                 </div>
+                                                  <!-- Hide and show password Ends -->
+                                            </div>
+    
+    
+                                    </div>
+                                    <input userid="131" type="button" value="Update" class="btn btn__save pass-u">
+                                </div>
+
+
+                                
+                                <div class="message success">
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Spinner element -->
+                    <!-- <div class="spinner" style="display: none;"></div> -->
+                    <!-- Modern Spinner element -->
+                    <div class="spinner">
+                        <div class="rect1"></div>
+                        <div class="rect2"></div>
+                        <div class="rect3"></div>
+                        <div class="rect4"></div>
+                        <div class="rect5"></div>
+                    </div>
+
+                    <!-- ============= Add Users Box ============== -->
+                    <div class="overlay">
+                        
+                    </div>
+                       
+                            <div class="profile__formBox profile__formBox--addUsers">
+                                <span class="profile__formBox--cross profile__formBox--cross-users">&times;</span>
+                                <form action="#" method="post" class="profile__form">
+                                    <div class="profile__form--group">
+                                        <h3 class="profile__formBox--heading">
+                                            Add User
+                                        </h3>
+                                    </div>
+                                    <div class="addUser__validation">
+                                        
+                                    </div>
+                                    <div class="profile__formBox--content profile__formBox--content-addUsers">
+                                        <div class="profile__form--group">
+                                            <label for="firstname" class="profile__form--group-label">Name</label>
+                                            <input type="text" name="start" id="start" class="profile__form--group-input" >
+                                        </div>
+                                        
+                                        <div class="profile__form--group">
+                                            <label for="email" class="profile__form--group-label">Email</label>
+                                            <input type="email" name="start" id="start" class="profile__form--group-input" >
+                                        </div>
+        
+                                        <div class="profile__form--group">
+                                           <div class="profile__form--group-tooltip">
+                                                <label for="profile" class="profile__form--group-label">Profile</label>
+                                                <p class="profile__form--group-tooltip-para user__tooltip">
+                                                    <ion-icon name="help-circle-outline" class="icon__tooltip"></ion-icon>
+                                                    <span class="user__tooltiptext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sequi.</span>
+                                                </p>
+                                           </div>
+                                            <div class="dropdown-wrapper dropdown-wrapper__users">
+                                                <span class="dropdown__span dropdown__span--users">Choose your Profile</span>
+                                                <ul class="dropdown-list" id="profileDropdown profile">
+                                                    <li><a href="#" data-profile="1">Administrator</a></li>
+                                                    <li><a href="#" data-profile="2">Manager</a></li>
+                                                    <li><a href="#" data-profile="3">Read Only</a></li>
+                                                    <li><a href="#" data-profile="4">Finance</a></li>
+                                                    <li><a href="#" data-profile="5">Development</a></li>
+                                                    <li><a href="#" data-profile="6">Digital</a></li>
+                                                    <li><a href="#" data-profile="7">Copywriting</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input type="button" value="save" class="btn btn__save">
+                                    </div>
+                                </form>
+                            </div>
+                    <!--========== Delete User Box starts ===============-->
+                    <div class="overlay">
+
+                    </div>
+                    <div class="profile__formBox profile__formBox--delete">
+                        <span class="profile__formBox--cross profile__formBox--cross-delete">&times;</span>
+                        <form action="#" method="post" class="profile__form">
+                            <div class="profile__form--group">
+                                <h3 class="profile__formBox--heading profile__formBox--heading-deleteUsers">
+                                    Delete User
+                                </h3>
+                            </div>
+                            <div class="profile__formBox--content profile__formBox--content-deleted">
+                                <div class="profile__formBox--content-delete">
+                                    <p class="profile__formBox--content-delete-para">
+                                        Are you sure want to delete?
+                                    </p>
+                                    <div class="profile__formBox--content-delete-buttons">
+                                        <input type="button" value="Delete" class="btn__delete">
+                                        <input type="button" value="Cancel" class="btn__cancel">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ====================== Delete User Box Ends =================== -->
+                <!-- </div> -->
+            </div>
+        </section>
+    </main>
+
+   <!--==================================== Footer starts here =============================== -->
+
+   <!-- <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd &VerticalLine; Made with
+                <i class="fa-regular fa-heart icon__heart"></i>
+                &VerticalLine; Image Credits
+                <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+            </p>
+        </div>
+
+        <nav class="footer__navigation">
+            <ul class="footer__navigation--list">
+                <li class="footer__navigation--item">
+                    <a href="../privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../contact/index.html" class="footer__navigation--link">get help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer> -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+
+<!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+<!--==================================== Cookies Popup Ends Here =============================== -->
+    <!-- <div class="overlay">
+
+    </div> -->
+</div>
+
+
+
+<!-- Jquery CDN Link -->
+<!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Font Awesome JS CDN Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<!-- IonIcons CDN Link -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="users.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,329 @@
+/* ==================== CSS File =================== */
+/* ==================== Media Queries =================== */
+/* ==================== Fonts =================== */
+/* ==================== Colors =================== */
+/* ==================== Center our content =================== */
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 160em) {
+  .row {
+    max-width: 150rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 137.5em) {
+  .row {
+    max-width: 130rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 112.5em) {
+  .row {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 93.75em) {
+  .row {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .row {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .row {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .row {
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 24em) {
+  .row {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .row {
+    max-width: 23rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 160em) {
+  .row {
+    max-width: 160rem;
+    margin: 0 auto;
+  }
+}
+
+/* ==================== Basic Styling =================== */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #333;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.upper-text {
+  text-transform: uppercase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.primary {
+  background-color: #3335CF;
+}
+
+.secondary {
+  background-color: #ff109b;
+}
+
+.tertiary {
+  background-color: #cdb4db;
+}
+
+.grey-dark {
+  color: #adb5bd;
+}
+
+.color-primary {
+  color: #3335CF;
+}
+
+.color-secondary {
+  color: #ff109b;
+}
+
+.padding-bottom-big {
+  padding-bottom: 4rem;
+}
+
+.padding-top-big {
+  padding-top: 20rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .padding-top-big {
+    padding-top: 15rem;
+  }
+}
+
+.padding-top-medium {
+  padding-top: 10rem;
+}
+
+.padding-top-small {
+  padding-top: 5rem;
+}
+
+.padding-custom {
+  padding-top: 25rem;
+}
+@media only screen and (max-width: 75em) {
+  .padding-custom {
+    padding-top: 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .padding-custom {
+    padding-top: 10rem;
+  }
+}
+
+.marketing__position {
+  position: relative;
+  z-index: -10;
+}
+@media only screen and (max-width: 75em) {
+  .marketing__position {
+    padding: 10rem 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .marketing__position {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .margin-top-small {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .margin-bottom-small {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .margin-bottom-medium {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .margin-left-medium-minus {
+    margin-left: -6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .margin-left-medium-minus {
+    margin-left: -8rem;
+  }
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 160em) {
+  html {
+    font-size: 81.25%;
+  }
+}
+@media only screen and (max-width: 137.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 112.5em) {
+  html {
+    font-size: 68.75%;
+  }
+}
+@media only screen and (max-width: 93.75em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (min-width: 160em) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+body {
+  line-height: 1.6;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 5rem 0;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 1px;
+  grid-auto-rows: minmax(min-content, auto);
+  grid-auto-flow: dense;
+  padding: 1px;
+}
+@media only screen and (max-width: 37.5em) {
+  .grid-layout > * {
+    grid-column-end: span 4;
+  }
+}
+
+.grid-item {
+  padding: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.span-1 {
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+@media only screen and (max-width: 37.5em) {
+  .span-1 {
+    grid-column-end: span 4;
+  }
+}
+
+.span-2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+@media only screen and (max-width: 37.5em) {
+  .span-2 {
+    grid-column-end: span 4;
+  }
+}
+
+.span-3 {
+  grid-column-end: span 3;
+  grid-row-end: span 4;
+}
+@media only screen and (max-width: 37.5em) {
+  .span-3 {
+    grid-column-end: span 4;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .grid-item-48 {
+    grid-column-end: span 4;
+    grid-row-end: span 2;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .grid-item-50 {
+    grid-column-end: span 4;
+    grid-row-end: span 2;
+  }
+}/*# sourceMappingURL=style.css.map */

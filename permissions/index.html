@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../dashboard/css/style.css">
+
+    <title> Permissions | AdShare Marketing Dashboard</title>
+</head>
+<body class="dashboard">
+            
+    
+    <!-- Dashboard Starts Here -->
+    
+    <!--=========================== Header starts here =============================== -->
+<div class="sidebarr sidebarr__account" id="main">
+
+
+    <header class="header">
+        <div class="header__content">
+                <h2 class="welcome__textbox--heading-text">
+                    The Trust At - 
+                    <!-- Change the name below to toggle the map -->
+                    <span class="plan plan__style">Enterprise</span>
+                    <span class="plan__style">Plan</span>
+                </h2>
+
+            <div class="header__profileBox">
+                <div class="header__profileBox--flex">
+                    <p class="header__profileBox--flex-user">
+                        Jamshed					                   
+                    </p>
+                    <!-- <span onclick="openNav()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span> -->
+                    <span onclick="toggleSidebar()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span>
+
+                </div>
+            </div>
+        </div>
+                
+    </header>
+
+
+    <!--=========================== Header Ends here =============================== -->
+    <!--=========================== Sidebar Ends =============================== -->
+
+    <!-- =========================== New Sidebar Starts ======================= -->
+    <div id="mySidenav" class="sidenav">
+        <a href="../dashboard/index.html">
+            <img src="../img/logo/logo with a/logo-dashboard.svg" alt="logo" class="logo__img--new">
+        </a>
+        <div class="sidenav__list">
+                <a href="../dashboard/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Dashboard
+                </a>
+                <a href="../account2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    My Account
+                </a>
+
+                <a href="../users/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Users
+                </a>
+               
+
+                <a href="../payment2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Payment Method
+                </a>
+
+                <a href="../tracking3/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Tracking
+                </a>
+
+                <div class="sidenav__list--item-logout">
+                    <a href="#" class="btn__logout">Logout</a>
+                </div>
+        </div>  
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd
+            </p>
+        </div>      
+    </div>
+    <!--=========================== New Sidebar Ends =============================== -->
+
+    
+
+    <main class="dashboard__row">
+        <section class="permissions">
+           
+                <div class="permissions__content">
+                    <div class="permissions__textbox">
+                        <div class="permissions__textbox--text">
+                            <h3 class="permissions__heading">
+                                Manage Permissions
+                            </h3>
+                            <p class="permissions__para">
+                                Welcome to the Manage Permissions page, where you have the power to empower your team by controlling their access and privileges. With just a few clicks, you can effortlessly fine-tune permissions, shaping user roles and defining their capabilities.
+                            </p>
+                            <p class="permissions__para adminNote"> Note: Administrator profile is global and hence not listed in the system.
+                            </p>
+                        </div>
+                        
+                        <div id="dropdown-wrapper" class="dropdown-wrapper">
+                            <span class="dropdown__span">Select a Profile</span>
+                        
+                            <ul class="dropdown-list">
+                                <li><a href="#" data-profile="1">Profile 1</a></li>
+                                <li><a href="#" data-profile="2">Profile 2</a></li>
+                                <li><a href="#" data-profile="3">Profile 3</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="permissions__buttons">
+                        <div class="permissions__buttons--left">
+                            <div class="permissions__buttons--box">
+                                <i class="fa-solid fa-trash icon__permissions"></i>
+                                <button type="delete" class="btn__permissions deletep">Delete Profile</button>
+                            </div>
+                            <div class="permissions__buttons--box">
+                                <div class="permissions__activate">
+                                    <p class="permissions__activate--text">
+                                        Activate Profile
+                                    </p>
+                                    <div class="permissions__activate--checkbox">
+                                        
+                                        <input id="adminfee" name="adminfee" type="checkbox" class="profileActive" disabled>
+                                        <label for="adminfee" class="checkboxLabel paddActivez">
+                                        <span class="check-handler"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="permissions__buttons--right">
+                            <div class="permissions__buttons--box">
+                                <i class="fa-solid fa-plus icon__permissions"></i>
+                                <button type="delete" class="btn__permissions createp">Create</button>
+                            </div>
+                            <div class="permissions__buttons--box">
+                                <i class="fa-solid fa-link-slash icon__permissions"></i>
+                                <button type="delete" class="btn__permissions unlinkp">Unlink</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                        <!--========== Delete User Box ===============-->
+                        <div class="overlay">
+
+                        </div>
+                        <div class="profile__formBox profile__formBox--delete profile__formBox--delete-permissions">
+                            <span class="profile__formBox--cross profile__formBox--cross-delete">&times;</span>
+                            <form action="#" method="post" class="profile__form">
+                                <div class="profile__form--group">
+                                    <h3 class="profile__formBox--heading">
+                                        Create Profile
+                                    </h3>
+                                </div>
+                                <div class="profile__formBox--content profile__formBox--content-permissions">
+                                    <div class="profile__formBox--content-delete profile__formBox--content-delete-permissions">
+                                        <p class="profile__formBox--content-delete-para">
+                                            Please add profile the new profile name and toggle it to activate
+                                        </p>
+                                        <div class="profile__form--group profile__form--group-permissions">
+                                            <label for="firstname" class="profile__form--group-label">Profile Name</label>
+                                            <input type="email" class="profile__form--group-input profilename">
+                                        </div>
+                                        <div class="profile__formBox--content-delete-buttons profile__formBox--content-delete-buttons-permissions">
+                                            <input type="button" value="Save" class="btn__save--permissions form-modal__submit permissionsActive">
+                                            <!-- <input type="button" value="Cancel" class="btn btn__cancel form-modal__cancel"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    <div class="permissions__catalog">
+                        <div class="permissions__catalog--content">
+                            <div class="permissions__catalog--heading">
+                                <h3 class="permissions__catalog--heading-text">
+                                    Permissions Catalog
+                                </h3>
+                            </div>
+                            <div class="permissions__catalog--items">
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            access campaigns
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee1" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee1" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Access Reports
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee2" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee2" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Access Finance
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee3" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee3" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Access Contacts
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee4" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee4" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Link Contacts
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee5" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee5" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Edit Contacts
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox"> 
+                                            <input id="adminfee6" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee6" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Manual Payments
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee7" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee7" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Marketing Options
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee8" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee8" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Delete Transaction Contacts
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee9" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee9" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Resend Receipt Contacts
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee10" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee10" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Access Letters
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee11" name="permissions[]" type="checkbox" class="profileActive" disabled>
+                                            <label for="adminfee11" class="checkboxLabel paddActive paddActivez">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+        </section>
+    </main>
+
+<!--==================================== Footer starts here =============================== -->
+
+<!-- <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd &VerticalLine; Made with
+                <i class="fa-regular fa-heart icon__heart"></i>
+                &VerticalLine; Image Credits
+                <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+            </p>
+        </div>
+
+        <nav class="footer__navigation">
+            <ul class="footer__navigation--list">
+                <li class="footer__navigation--item">
+                    <a href="privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="contact/index.html" class="footer__navigation--link">get help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer> -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+<!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+<!--==================================== Cookies Popup Ends Here =============================== -->
+    <!-- <div class="overlay">
+
+    </div> -->
+</div>
+
+
+
+<!-- Jquery CDN Link -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!-- Font Awesome JS CDN Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<!-- IonIcons CDN Link -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="permissions.js"></script>
+
+</body>
+</html>
+

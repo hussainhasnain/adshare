@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Selectize  -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+        integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../dashboard/css/style.css">
+
+    <title> My Account | AdShare Marketing Dashboard</title>
+</head>
+<body class="dashboard">
+            
+    
+    <!-- Dashboard Starts Here -->
+    
+    <!--=========================== Header starts here =============================== -->
+<div class="sidebarr sidebarr__account" id="main">
+
+    <header class="header">
+        <div class="header__content">
+                <h2 class="welcome__textbox--heading-text">
+                    The Trust At - 
+                    <!-- Change the name below to toggle the map -->
+                    <span class="plan plan__style">Enterprise</span>
+                    <span class="plan__style">Plan</span>
+                </h2>
+
+            <div class="header__profileBox">
+                <div class="header__profileBox--flex">
+                    <p class="header__profileBox--flex-user">
+                        Jamshed					                   
+                    </p>
+                    <!-- <span onclick="openNav()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span> -->
+                    <span onclick="toggleSidebar()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span>
+
+                </div>
+            </div>
+        </div>
+                
+    </header>
+
+    <!--=========================== Header Ends here =============================== -->
+
+    <!--=========================== Sidebar =============================== -->
+
+       <!-- =========================== New Sidebar Starts ======================= -->
+       <div id="mySidenav" class="sidenav">
+        <a href="../dashboard/index.html">
+            <img src="../img/logo/logo with a/logo-dashboard.svg" alt="logo" class="logo__img--new">
+        </a>
+        <div class="sidenav__list">
+                <a href="../dashboard/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Dashboard
+                </a>
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex sidenav__link--active">
+                    My Account
+                </a>
+
+                <a href="../users/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Users
+                </a>
+               
+
+                <a href="../payment2/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Payment Method
+                </a>
+
+                <a href="../tracking3/index.html" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Tracking
+                </a>
+
+                <div class="sidenav__list--item-logout">
+                    <a href="#" class="btn__logout">Logout</a>
+                </div>
+        </div>  
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd
+            </p>
+        </div>      
+    </div>
+    <!--=========================== New Sidebar Ends =============================== -->
+    <!--=========================== Sidebar Ends =============================== -->
+
+    <main class="dashboard__row">
+     <!--=========================== myAccount Page Starts Here =============================== -->   
+        <div class="myAccount">
+            <!-- <div class="myAccount__row"> -->
+                
+                <div class="myAccount__content">
+                    <div class="myAccount__heading">
+                        <h3 class="myAccount__heading--text">
+                            User settings for David Miller
+                        </h3>
+                    </div>
+                    <div class="myAccount__textboxArea">
+                        <div class="myAccount__textbox">
+                            
+                            <div class="myAccount__heading--personal">
+                                <h4 class="myAccount__heading--personal-text">
+                                    Personal details
+                                </h4>
+                            </div>
+    
+                            <p class="myAccount__para">
+                                Update your name and email address that you use for AdShare. Learn how we keep your data safe, view our <span class="myAccount__para--span">
+                                    <a href="../privacy/privacy.html" class="myAccount__para--span-link">privacy notice.</a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="myAccount__forms" oninput="enableSaveButton1()">
+                        
+                            <form action="#" class="myAccount__form">
+                                <div class="myAccount__form--group">
+                                    <label for="firstname" class="myAccount__form--label">First Name</label>
+                                    <input type="text" class="myAccount__form--input" value="David" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="lastname" class="myAccount__form--label">Last Name</label>
+                                    <input type="text" class="myAccount__form--input" value="Miller" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="email" class="myAccount__form--label">Email</label>
+                                    <input type="email" class="myAccount__form--input" value="david@gmail.com" required>
+                                </div>
+
+                                <div class="myAccount__form--buttons">
+                                    <!-- <button type="button" id="saveButtonFirst" class="myAccount__form--buttons-save" disabled onclick="disableSaveButton1()">
+                                        Save Changes
+                                    </button> -->
+
+                                    <input type="button" value="Save Changes" id="saveButtonFirst" class="myAccount__form--buttons-save updateone" disabled onclick="disableSaveButton1()">
+
+
+                                    <button type="button" class="myAccount__form--buttons-cancel" onclick="disableSaveButton1()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+
+                  
+
+
+                    <!-- <div class="successMsg is-msg hidden" ><div class="successMsg__icon"><i class="fa-solid fa-circle-check successMsg__icon--success"></i></div><p class="successMsg__text">Please make sure no field is empty before proceeding.</p></div>  -->
+
+
+                    
+
+                    <div class="border__line">&nbsp;</div>
+
+                    <div class="myAccount__textboxArea">
+                        <div class="myAccount__textbox">
+                            
+                            <div class="myAccount__heading--personal">
+                                <h4 class="myAccount__heading--personal-text">
+                                    Organisation details
+                                </h4>
+                            </div>
+    
+                            <p class="myAccount__para">
+                                Update your details that you use for your Organisation. Learn how we keep your data safe, view our <span class="myAccount__para--span">
+                                    <a href="../privacy/privacy.html" class="myAccount__para--span-link">privacy notice.</a>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="myAccount__forms" oninput="enableSaveButton2()">
+                            <form action="#" class="myAccount__form">
+                                <div class="myAccount__form--group">
+                                    <label for="organisation" class="myAccount__form--label">Organisation Name</label>
+                                    <input type="text" class="myAccount__form--input" value="The Trust" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="url" class="myAccount__form--label">Website Url</label>
+                                    <input type="url" class="myAccount__form--input myAccount__form--input-url" value="" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="phone" class="myAccount__form--label">Office Phone</label>
+                                    <input type="tel" class="myAccount__form--input" value="+1 0123 456 789" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="phone" class="myAccount__form--label">Alternate Phone</label>
+                                    <input type="tel" class="myAccount__form--input" value="+1 0123 456 789" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="address" class="myAccount__form--label">Address</label>
+                                    <input type="text" class="myAccount__form--input" value="London, England" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="address" class="myAccount__form--label">Address2</label>
+                                    <input type="text" class="myAccount__form--input" value="Greater London, England" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="city" class="myAccount__form--label">City</label>
+                                    <input type="text" class="myAccount__form--input" value="Maidenhead" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="postal" class="myAccount__form--label">Zip / Postal Code</label>
+                                    <input type="text" class="myAccount__form--input" value="123456" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="region" class="myAccount__form--label">State / Province / Region</label>
+                                    <input type="text" class="myAccount__form--input" value="London" required>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="country" class="myAccount__form--label">Country</label>
+                                    <input type="text" class="myAccount__form--input" value="England" required>
+                                </div>
+
+                                <div class="myAccount__form--buttons">
+                                    <!-- <button type="button" id="saveButtonSecond" class="myAccount__form--buttons-save" disabled onclick="disableSaveButton2()">
+                                        Save Changes
+                                    </button> -->
+                                    <input type="button" value="Save Changes" id="saveButtonSecond" class="myAccount__form--buttons-save updatethree" disabled onclick="disableSaveButton2()">
+
+
+                                    <button type="button" class="myAccount__form--buttons-cancel" onclick="disableSaveButton2()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+                    
+                    <div class="border__line">&nbsp;</div>
+
+                    <div class="myAccount__textboxArea">
+                        <div class="myAccount__textbox">
+                            
+                            <div class="myAccount__heading--personal">
+                                <h4 class="myAccount__heading--personal-text">
+                                    Change your password
+                                </h4>
+                            </div>
+    
+                            <p class="myAccount__para">
+                                You can change your password here. To keep your account secure, it must be at lease 12 characters long.
+                            </p>
+                        </div>
+
+                        <div class="myAccount__forms" oninput="enableSaveButton3()">
+                            <form action="#" class="myAccount__form">
+                                <div class="myAccount__form--group">
+                                    <label for="password" class="myAccount__form--label">New Password</label>
+                                    <p class="myAccount__form--passwordText">
+                                        Must be atleast 12 characters long including one "Capital" letter and one "Special" character. Like "Ex@mple123!**"
+                                    </p>
+                                    <div class="editUser__password">
+                                        <input type="password" class="myAccount__form--input passwordUser__input">
+
+                                        <div class="passwordUser__eye">
+                                            <ion-icon name="eye-outline" class="passwordUser__eye--icon passwordUser__eye--icon-open"></ion-icon>
+                                            <ion-icon name="eye-off-outline" class="passwordUser__eye--icon passwordUser__eye--icon-close"></ion-icon>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="myAccount__form--group">
+                                    <label for="password" class="myAccount__form--label">Confirm Password</label>
+                                  
+                                    <div class="editUser__password">
+                                        <input type="password" class="myAccount__form--input passwordUser__input--confirm">
+
+                                        <div class="passwordUser__eye passwordUser__eye--confirm">
+                                            <ion-icon name="eye-outline" class="passwordUser__eye--icon passwordUser__eye--icon-open passwordUser__eye--icon-open-confirm"></ion-icon>
+                                            <ion-icon name="eye-off-outline" class="passwordUser__eye--icon passwordUser__eye--icon-close passwordUser__eye--icon-close-confirm"></ion-icon>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="myAccount__form--buttons">
+                                    <!-- <button type="button" id="saveButtonThird" class="myAccount__form--buttons-save" disabled onclick="disableSaveButton3()">
+                                        Save Changes
+                                    </button> -->
+
+                                    <input type="button" value="Update Password" id="saveButtonThird" class="myAccount__form--buttons-save updatetwo" disabled onclick="disableSaveButton3()">
+
+
+                                    <button type="button" class="myAccount__form--buttons-cancel" onclick="disableSaveButton3()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+        
+    </main>
+
+  <!--==================================== Footer starts here =============================== -->
+
+  <!-- <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd &VerticalLine; Made with
+                <i class="fa-regular fa-heart icon__heart"></i>
+                &VerticalLine; Image Credits
+                <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+            </p>
+        </div>
+
+        <nav class="footer__navigation">
+            <ul class="footer__navigation--list">
+                <li class="footer__navigation--item">
+                    <a href="../privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="../contact/index.html" class="footer__navigation--link">get help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer> -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+
+<!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+<!--==================================== Cookies Popup Ends Here =============================== -->
+    <div class="overlay">
+
+    </div>
+</div>
+
+
+
+<!-- Jquery CDN Link -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!-- Jquery Selectize -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+  integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<!-- Font Awesome JS CDN Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<!-- IonIcons CDN Link -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="account.js"></script>
+
+</body>
+</html>
+

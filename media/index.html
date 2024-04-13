@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../formsCSS/style.css">
+    <title>Digital Marketing & Growth Marketing Platform | AdShare </title>
+</head>
+<body>
+    
+    <main>
+        <section class="media">
+            <div class="row">
+                <div class="media__content">
+                    <div class="media__container">
+                        <div class="media__heading">
+                            <h3 class="media__heading--text">
+                                upload images
+                            </h3>
+                        </div>
+                        <div class="media__para">
+                            <p class="media__para--text">
+                                Pleae upload images you want to add to your gallery
+                            </p>
+                        </div>
+                        <div class="media__pagination">
+                            <a href="#" class="media__pagination--text">Media</a>
+                        </div>
+                        <div class="media__drop">
+                            <!-- <div class="media__drop--img">
+                                <i class="fa-solid fa-cloud-arrow-up media__drop--img-icon"></i>
+                            </div> -->
+                            <div class="media__drop--textbox">
+                                <!-- <p class="media__drop--textbox-text">
+                                    Drag & Drop your Images here
+                                </p> -->
+                                <!-- <button href="#" class="btn btn__browse"> -->
+                                <a href="cid/index.html" class="btn btn__browse">
+                                    <i class="fa-solid fa-cloud-arrow-up media__drop--img-icon"></i>
+                                    <p class="btn__browse--text">Upload Images</p>
+                                </a> 
+                                <!-- <p class="media__drop--textbox-or">or</p>
+                                <a href="#" class="btn__media">Go to Your Media Gallery</a> ///////////////////////////////////--> 
+                                <input type="file" name="imageFile" id="imageFile" multiple>
+                                <p class="media__drop--textbox-size">
+                                    Max. File Size: <span class="media__drop--textbox-size-span">2MB</span>
+                                </p>
+                                <p class="media__drop--textbox-type">
+                                    Only <span class="media__drop--textbox-size-span">PNG</span>, <span class="media__drop--textbox-size-span">JPG</span>, and <span class="media__drop--textbox-size-span">JPEG</span> Images are supported
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo__content">
+                        <div class="photo__content--data">
+                            <div class="photo__content--add btn__browse--again">
+                                <i class="fa-solid fa-plus icon__plus"></i>
+                            </div>
+                            <!-- <div class="photo__content--delete">
+                                <a href="#" class="btn btn__deleteAll">Delete All</a>
+                            </div> -->
+                            <a href="#" class="btn btn__selectImages">Select Image</a>
+                            <a href="#" class="btn btn__deleteSelected">Delete Selected</a>
+                        </div>
+
+                        <div class="imageDisplayContainer">
+                            <div class="imageDisplayContainer__textbox">
+                                <p class="imageDisplayContainer__textbox--text">
+                                        Currently, You have no Images in your gallery. 
+                                    <span class="imageDisplayContainer__textbox--text-span">Upload Images.</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="photo__content--upload">
+                            <div class="photo__content--back-button">
+                                <a href="#" class="btn btn__back">
+                                    Back
+                                </a>
+                            </div>
+                            <div class="photo__content--delete">
+                                <a href="#" class="btn btn__deleteAll">Delete All</a>
+                            </div>
+                            <div class="photo__content--upload-button">
+                                <a href="#" class="btn btn__uploadAll">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    Upload
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Success and Failure Validation Sample Messages -->
+                            <div class="sample__content">
+                                
+                                <!-- Success -->
+                                <div class="successMsg">
+                                    <div class="successMsg__icon">
+                                        <i class="fa-solid fa-circle-check successMsg__icon--success"></i>
+                                    </div>
+                                    <p class="successMsg__text">
+                                        Images have been Uploaded to your gallery successfully.
+                                    </p>
+                                </div>
+                    
+                                <!-- Failure -->
+                                <!-- <div class="failureMsg">
+                                    <div class="failureMsg__icon">
+                                        <i class="fa-solid fa-circle-exclamation failureMsg__icon--failure"></i>
+                                    </div>
+                                    <p class="failureMsg__text">
+                                        Oops! There is an error creating your account.
+                                    </p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Import -->
+
+                    <div class="import__container container">
+                        <div class="row">
+                            <div class="import__container__content container__content">
+                                <h1 class="heading-primary hero__textbox--heading import__heading">
+                                    Import Data
+                                </h1>
+                                <form action="https://adshare.click/import" method="post" enctype="multipart/form-data" class="marketing__textbox--para" id="uploadForm">
+                                    <label for="fileToUpload" class="upload-label">Select CSV file to upload:</label>
+                                    <input type="file" name="fileToUpload" id="fileToUpload" accept=".csv" required="">
+                                </form>
+                                <div class="button-group">
+                                    <button class="action-button upload__button" name="submit" id="myForm">Upload CSV</button>
+                                    <button class="logout-button" onclick="logout()">Logout</button>
+                                </div>
+                                <div class="upload__error"></div>
+                                <div class="upload__success"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+      <!--==================================== Footer starts here =============================== -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+    <!-- Font Awesome CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- IonIcons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- JS File -->
+    <script src="media.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://adshare.click/main_branch/css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" style="text-align:center; display:block;margin-top:2.3rem;">
+        <img src="/main_branch/img/logo-home.svg" alt="logo" class="import__controls--logo-img" style="height:3.2rem;">
+        </a>
+        <h1 class="mt-3">Change Password</h1>
+        
+        {{ flash.output() }}
+        <form method="post" action="{{ url("users/changePassword") }}">
+           <input id="userid" type="hidden" name="userid" value = "{{useridd}}">
+           <div class="form-group row">
+                
+                {{ form.label('password', ['class': 'col-sm-2 col-form-label gggg']) }}
+                <div class="col-sm-10" style="margin-top:0.1rem !important;">
+                {{ form.render('password', ['class': 'form-control', 'placeholder': 'Password']) }}
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                {{ form.label('confirmPassword', ['class': 'col-sm-2 col-form-label']) }}
+                <div class="col-sm-10" style="margin-top:0.1rem !important;">
+                    {{ form.render('confirmPassword', ['class': 'form-control', 'placeholder': 'Confirm Password']) }}
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <div class="col-sm-10" style="margin-top:1rem !important;">
+                    {{ submit_button("Change Password", "class": "btn btn-primary") }}
+                </div>
+            </div>
+            {% if msg is defined %}
+                                    
+                                    <div class="successMsg" style="margin-top:1.5rem;">
+                                    <div class="successMsg__icon">
+                                      <i class="fa-solid fa-circle-check successMsg__icon--success"></i>
+                                    </div>
+                                    <p class="successMsg__text">
+                                        {{ msg }}
+                                    </p>
+                                   </div>
+                                <br>
+                                {% if(msg == 'Your password was successfully changed') %}
+                                <a href="/dashboard" class="goto">Go back to Dashboard</a>
+                                {% endif %}
+                                {% endif %}
+        </form>
+        <style>
+        /*============= Validation message css here =================*/
+        /*======== Re Usable Code Block for Success & Failure Msgs ============*/
+        .sample__content > *:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+        
+        .successMsg {
+          background-color: #3335CF;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          max-width: -moz-max-content;
+          max-width: max-content;
+          border-radius: 0.4rem;
+          padding: 0.1rem 1.5rem;
+        }
+        .successMsg__icon--success {
+          font-size: 1.4rem;
+          color: #fff;
+        }
+        .successMsg__text {
+          font-size: 1rem;
+          color: #fff;
+        }
+        
+        .successMsg__icon {
+          transform: translateY(1px);
+        }
+        .hidden {display:none !important;}
+        /*============ validation message end=============*/
+        </style>
+        
+</body>
+</html>

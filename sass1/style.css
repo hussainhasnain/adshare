@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+}
+
+.container {
+  background-color: #f4f4f4;
+  padding: 12vh 20vw;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 5vh 20vw;
+  }
+}
+.container__content {
+  display: flex;
+  gap: 5rem;
+}
+@media only screen and (max-width: 600px) {
+  .container__content {
+    flex-direction: column;
+  }
+}
+.container__left {
+  background-color: lightcoral;
+  padding: 10vh 3.5vw;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container__left--content {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.6rem;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .container__left--content {
+    flex-direction: column;
+  }
+}
+.container__left--content-1 {
+  background-color: yellow;
+  padding: 1.5vh 1.5vw;
+}
+.container__left--content-2 {
+  background-color: yellow;
+  padding: 1.5vh 1.5vw;
+}
+.container__left--content-3 {
+  background-color: yellow;
+  padding: 1.5vh 1.5vw;
+}
+.container__right {
+  background-color: purple;
+  padding: 10vw 8vw;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container__right--content {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.container__right--content-1 {
+  background-color: orangered;
+  padding: 1.5vh 1.5vw;
+}
+.container__right--content-2 {
+  background-color: orangered;
+  padding: 1.5vh 1.5vw;
+}
+.container__right--content-3 {
+  background-color: orangered;
+  padding: 1.5vh 1.5vw;
+}/*# sourceMappingURL=style.css.map */

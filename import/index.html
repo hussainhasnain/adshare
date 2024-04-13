@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <title>CSV Upload | AdShare Marketing Platform</title>
+</head>
+<body>
+
+    <section class="import import__controls">
+        
+        <div class="import__content">
+            <div class="import__controls--logo">
+                <a href="../index.html">
+                    <img src="../img/logo/logo with a/logo-home.svg" alt="logo" class="import__controls--logo-img">
+                </a>
+                <p class="import__controls--heading">
+                        Import Data and Ads display Centre
+                </p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="container__content">
+                        <h1 class="heading-primary import__heading">
+                            Import Marketing Data or Logout
+                        </h1>
+                        <form action="https://adshare.click/import" method="post" enctype="multipart/form-data" class="marketing__textbox--para" id="uploadForm">
+                            <label for="fileToUpload" class="upload-label">Select CSV file to upload:</label>
+                            <input type="file" name="fileToUpload" id="fileToUpload" accept=".csv" required="">
+                        </form>
+                        <div class="button-group">
+                            <button class="action-button upload__button" name="submit" id="myForm">Upload CSV</button>
+                            <button class="logout-button" onclick="logout()">Logout</button>
+                        </div>
+                        <div class="container__content--or">
+                            <p class="container__content--or-text">
+                                or
+                            </p>
+                        </div>
+                        <div class="container__content--remove">
+                            <button class="container__content--remove-text">
+                                Remove your CSV File
+                            </button>
+                        </div>
+                        <div class="button__controls">
+                        </div>
+                        <div class="upload__error"></div>
+                        <div class="upload__success"></div>
+                    </div>
+
+                    <div class="file__validation">
+                        
+                    </div>
+
+                    <p class="is-msg file__validation--text">
+                        
+                    </p> 
+
+
+                </div>
+            </div>
+    
+    
+            <!-- ================== Toggles and Ads box starts here ===================== -->
+            <div class="container container__ads">
+                <div class="row">
+                    <div class="container__content">
+                        <h1 class="heading-primary import__heading import__heading--ads">
+                            Manage Controls and Display Ads
+                        </h1>
+                        <div class="container__content--para">
+                            <p class="container__content--para-text">
+                                Here you can Toggle Permission and display your Ads
+                            </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="#" class="btn btn__toggless btn__controls">Toggles</a>
+                            <a href="#" class="btn btn__adss">Ads</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ================== Toggles and Ads box Ends here ===================== -->
+        </div>
+    </section>
+
+    <section class="permissions hidden permissions__controls">
+        <div class="row">
+            <div class="permissions__content">
+                <div class="permissions__textbox">
+                    <div class="permissions__textbox--text">
+                        <h3 class="permissions__heading">
+                            Manage Controls
+                        </h3>
+                        <p class="permissions__para">
+                            Welcome to the Manage Controls page, where you have the power to empower your team by controlling their access and privileges. With just a few clicks, you can effortlessly fine-tune controls, shaping Organisation roles and defining their capabilities.
+                        </p>
+                    </div>
+                    
+                    <div id="dropdown-wrapper" class="dropdown-wrapper">
+                        <span class="dropdown__span">Choose your Organisation</span>
+                    
+                        <ul class="dropdown-list">
+                            <li><a href="#" data-profile="1">Organisation 1</a></li>
+                            <li><a href="#" data-profile="2">Organisation 2</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            <li><a href="#" data-profile="3">Organisation 3</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                <div class="importValidation__container">
+
+                </div>
+                <div class="permissions__buttons">
+                    <div class="permissions__buttons--left">
+                        <!-- <div class="permissions__buttons--box">
+                            <button type="delete" class="btn btn__permissions deletep">Delete User</button>
+                        </div> -->
+                        <div class="permissions__buttons--box">
+                            <div class="permissions__activate">
+                                <!-- <p class="permissions__activate--text">
+                                    Activate User
+                                </p> -->
+                                <!-- <div class="permissions__activate--checkbox">
+                                    
+                                    <input id="adminfee" name="adminfee" type="checkbox" class="profileActive">
+                                    <label for="adminfee" class="checkboxLabel">
+                                    <span class="check-handler"></span>
+                                    </label>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="permissions__buttons--right">
+                        <div class="permissions__buttons--box">
+                            <button type="delete" class="btn btn__permissions createp">Create</button>
+                        </div>
+                        <div class="permissions__buttons--box">
+                            <button type="delete" class="btn btn__permissions unlinkp">Unlink</button>
+                        </div>
+                    </div> -->
+                </div>
+
+                
+                    <!--========== Delete User Box ===============-->
+                    <!-- <div class="profile__formBox profile__formBox--delete profile__formBox--delete-permissions">
+                        <span class="profile__formBox--cross profile__formBox--cross-delete">&times;</span>
+                        <form action="#" method="post" class="profile__form">
+                            <div class="profile__form--group">
+                                <h3 class="profile__formBox--heading">
+                                    Create Profile
+                                </h3>
+                            </div>
+                            <div class="profile__formBox--content">
+                                <div class="profile__formBox--content-delete profile__formBox--content-delete-permissions">
+                                    <p class="profile__formBox--content-delete-para">
+                                        Please add profile the new profile name and toggle it to activate
+                                    </p>
+                                    <div class="profile__form--group profile__form--group-permissions">
+                                        <label for="firstname" class="profile__form--group-label">Profile Name</label>
+                                        <input type="email" class="profile__form--group-input profilename" placeholder = "Enter the new profile name">
+                                    </div>
+                                    <div class="profile__formBox--content-delete-buttons">
+                                        <input type="button" value="Save" class="btn btn__delete form-modal__submit permissionsActive">
+                                        <input type="button" value="Cancel" class="btn btn__cancel form-modal__cancel">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div> -->
+                <div class="permissions__catalog">
+                    <div class="permissions__catalog--content">
+                        <div class="permissions__catalog--heading">
+                            <h3 class="permissions__catalog--heading-text">
+                                Controls Catalog
+                            </h3>
+                        </div>
+                        <div class="permissions__catalog--items">
+                            <div class="permissions__catalog--item">
+                                <div class="permissions__catalog--item-name">
+                                    <p class="permissions__catalog--item-name-text">
+                                        Payment Method 
+                                    </p>
+                                </div>
+                                <div class="permissions__catalog--item-switch">
+                                    <p class="permissions__catalog--item-switch-text">
+                                        Deactivate / Activate
+                                    </p>
+                                    <div class="permissions__activate--checkbox">   
+                                        <input id="adminfee1" name="permissions[]" type="checkbox" class="profileActive">
+                                        <label for="adminfee1" class="checkboxLabel paddActive">
+                                        <span class="check-handler"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permissions__catalog--item">
+                                <div class="permissions__catalog--item-name">
+                                    <p class="permissions__catalog--item-name-text">
+                                        Tracking / Pixel Active
+                                    </p>
+                                </div>
+                                <div class="permissions__catalog--item-switch">
+                                    <p class="permissions__catalog--item-switch-text">
+                                        Deactivate / Activate
+                                    </p>
+                                    <div class="permissions__activate--checkbox">   
+                                        <input id="adminfee2" name="permissions[]" type="checkbox" class="profileActive">
+                                        <label for="adminfee2" class="checkboxLabel paddActive">
+                                        <span class="check-handler"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn__controls--back">
+                <a href="../import/index.html" class="btn btn__back">Back</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+     <!-- Font Awesome JS CDN Link -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="import.js"></script>
+</body>
+</html>

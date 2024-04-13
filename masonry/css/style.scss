@@ -1,0 +1,311 @@
+/* ==================== CSS File =================== */
+
+/* ==================== Media Queries =================== */
+$bp-smaller: 18.75em; // for 300 em
+$bp-smallest: 24em; // for 375px
+$bp-small: 37.5em; // for 600px
+$bp-medium:56.25em; // for 900px 
+$bp-large: 75em; // for 1200px
+$bp-larger: 93.75em; // for 1500px 
+$bp-largest:112.5em; // for 1800px
+$bp-desktop: 137.50em; // for 2200px
+$bp-big-desktop: 160em; //for 2560 px
+
+/* ==================== Fonts =================== */
+$font-primary: 'IBM Plex Sans', sans-serif;
+$font-secondary: 'Rubik', sans-serif;
+
+/* ==================== Colors =================== */
+$color-white: #fff;
+$color-black: #000;
+$color-primary: #3335CF;
+$color-primary-light: #5e4af9;
+// $color-primary-dark: #262c98;
+$color-primary-dark: #010674;
+$color-secondary: #ff109b;
+$color-light: #ffc8dd;
+$color-secondary-dark: #a12c64;
+$color-tertiary: #cdb4db;
+
+
+$color-grey-light: #e9ecef;
+$color-grey-light-2: #dee2e6;
+$color-grey-light-3: #ced4da;
+$color-grey-dark: #adb5bd;
+
+$color-green: #51ff00;
+$color-blue: #4545fd;
+$color-blue-dark: #1b1b7c;
+$color-facebook: #3b5998;
+$color-twitter: #1D9BF0;
+$color-red: #eb2323;
+$color-test: #b9c0c5;
+
+$color-hero: #FFE8E0;
+$color-grey-background: #F4F6F9;
+$color-text: #333;
+
+$color-cookies: #f0f0f0;
+
+$color-bubble: #BBD2FF;
+
+$color-success: #59cf51;
+$color-save: #3335CF;
+$color-error: #d63434;
+
+/* ==================== Center our content =================== */
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+    
+    @media only screen and (max-width: $bp-big-desktop){
+        max-width: 150rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-desktop){
+        max-width: 130rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-largest){
+        max-width: 110rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-larger){
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-large){
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-medium){
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-small){
+        max-width: 35rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-smallest){
+        max-width: 30rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-smaller){
+        max-width: 23rem;
+        margin: 0 auto;
+    }
+    @media only screen and (min-width: $bp-big-desktop){
+        max-width: 160rem;
+        margin: 0 auto;
+    }
+    
+}
+
+/* ==================== Basic Styling =================== */
+ul{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: $color-black;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1,h2,h3,h4,h5{
+    color: $color-text;
+    font-family: $font-primary;
+}
+.upper-text{
+    text-transform: uppercase;
+}
+.center-text{
+    text-align: center;
+}
+.bold{
+    font-weight: 500;
+}
+.align-right{
+    text-align: right;
+}
+.primary{
+    background-color: $color-primary;
+}
+.secondary{
+    background-color: $color-secondary;
+}
+.tertiary{
+    background-color: $color-tertiary;
+}
+.grey-dark{
+    color: $color-grey-dark;
+}
+.color-primary{
+    color: $color-primary;
+}
+.color-secondary{
+    color: $color-secondary;
+}
+.padding-bottom-big{
+    padding-bottom: 4rem;
+}
+.padding-top-big{
+    padding-top: 20rem;
+    @media only screen and (max-width: $bp-small){
+        padding-top: 15rem;
+    }
+    
+}
+.padding-top-medium{
+    padding-top: 10rem;
+}
+.padding-top-small{
+    padding-top: 5rem;
+}
+.padding-custom{
+    padding-top: 25rem;
+    @media only screen and (max-width: $bp-large){
+        padding-top: 5rem;
+    }
+    @media only screen and (max-width: $bp-small){
+        padding-top: 10rem;
+    }
+}
+.marketing__position{
+    position:relative;
+    z-index: -10;
+    @media only screen and (max-width: $bp-large){
+        padding: 10rem 0;
+    }
+    @media only screen and (max-width: $bp-small){
+        padding: 0;
+    }
+}
+.margin-top-small{
+    @media only screen and (max-width: $bp-small){
+        margin-top: 2rem;
+    }
+}
+.margin-bottom-small{
+    @media only screen and (max-width: $bp-small){
+        margin-bottom: 2rem;
+    }
+}
+.margin-bottom-medium{
+    @media only screen and (max-width: $bp-small){
+        margin-bottom: 4rem;
+    }
+}
+.margin-left-medium-minus{
+    @media only screen and (max-width: $bp-small){
+        margin-left: -6rem;
+    }
+}
+.margin-left-medium-minus{
+    @media only screen and (max-width: $bp-small){
+        margin-left: -8rem;
+    }
+}
+
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    @media only screen and (max-width: $bp-big-desktop){
+        font-size: 81.25%; //13rem
+    }
+    @media only screen and (max-width: $bp-desktop){
+        font-size: 75.00%; //12rem
+    }
+    @media only screen and (max-width: $bp-largest){
+        font-size: 68.75%; //11rem
+    }
+    @media only screen and (max-width: $bp-larger){
+        font-size: 62.5%; //10rem
+    }
+    @media only screen and (max-width: $bp-large){
+        font-size: 56.25%; //9rem
+    }
+    @media only screen and (min-width: $bp-big-desktop){
+        font-size: 93.75%; //14rem
+    }
+}
+body{
+    line-height: 1.6;
+    font-family: $font-primary;
+    padding: 5rem 0;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 1px;
+    grid-auto-rows: minmax(min-content, auto);
+    grid-auto-flow: dense;
+    padding: 1px;
+    & > * {
+        @media only screen and (max-width: $bp-small){
+            grid-column-end: span 4;
+        }
+    }
+}
+
+.grid-item {
+    padding: 1rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.span-1 {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+    @media only screen and (max-width: $bp-small){
+        grid-column-end: span 4;
+    }
+}
+
+.span-2 {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+    @media only screen and (max-width: $bp-small){
+        grid-column-end: span 4;
+    }
+}
+
+.span-3 {
+    grid-column-end: span 3;
+    grid-row-end: span 4;
+    @media only screen and (max-width: $bp-small){
+        grid-column-end: span 4;
+    }
+}
+
+.grid-item-48{
+    @media only screen and (max-width: $bp-large){
+        grid-column-end: span 4;
+        grid-row-end: span 2;
+    }
+}
+
+.grid-item-50{
+    @media only screen and (max-width: $bp-large){
+        grid-column-end: span 4;
+        grid-row-end: span 2;
+    }
+}
+

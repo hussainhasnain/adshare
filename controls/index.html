@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="../dashboard/css/style.css">
+
+    <title> Permissions | AdShare Marketing Dashboard</title>
+</head>
+<body class="dashboard">
+            
+    
+    <!-- Dashboard Starts Here -->
+    
+    <!--=========================== Header starts here =============================== -->
+<div class="side" id="main">
+
+
+    <!-- <header class="header">
+        <div class="header__content">
+          
+
+            <div class="emptyblock"></div>
+            <div class="header__profileBox">
+                <div class="header__profileBox--flex">
+                    
+                    <span onclick="toggleSidebar()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span>
+                </div>
+            </div>
+        </div>
+                
+    </header> -->
+
+
+    <!--=========================== Header Ends here =============================== -->
+
+    <!--=========================== Sidebar =============================== -->
+
+    <!-- <div id="mySidenav" class="sidenav sidenav__account">
+        <a href="../index.html" class="logo"><span class="logo__firstname">Ad</span><span class="logo__lastname">Share</span></a> 
+        <div class="sidenav__list">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../dashboard/index.html" class="sidenav__link">Dashboard</a>
+            <a href="../account/index.html" class="sidenav__link">My Account</a>
+            <a href="../users/index.html" class="sidenav__link">Users</a>
+            <a href="../payment/index.html" class="sidenav__link">Payment Method</a>
+            <a href="../tracking/index.html" class="sidenav__link">Tracking</a>
+            <a href="#" class="sidenav__link">Log Out</a>
+        </div>     
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd &VerticalLine; Made with
+                <i class="fa-regular fa-heart icon__heart"></i>
+                
+            </p>
+        </div>   
+      </div> -->
+    <!--=========================== Sidebar Ends =============================== -->
+
+    <main>
+        <section class="permissions">
+            <div class="row">
+                <div class="permissions__content">
+                    <div class="permissions__textbox">
+                        <div class="permissions__textbox--text">
+                            <h3 class="permissions__heading">
+                                Manage Controls
+                            </h3>
+                            <p class="permissions__para">
+                                Welcome to the Manage Controls page, where you have the power to empower your team by controlling their access and privileges. With just a few clicks, you can effortlessly fine-tune controls, shaping Organisation roles and defining their capabilities.
+                            </p>
+                        </div>
+                        
+                        <div id="dropdown-wrapper" class="dropdown-wrapper">
+                            <span class="dropdown__span">Choose your Organisation</span>
+                        
+                            <ul class="dropdown-list">
+                                <li><a href="#" data-profile="1">Organisation 1</a></li>
+                                <li><a href="#" data-profile="2">Organisation 2</a></li>
+                                <li><a href="#" data-profile="3">Organisation 3</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="permissions__buttons">
+                        <div class="permissions__buttons--left">
+                            <!-- <div class="permissions__buttons--box">
+                                <button type="delete" class="btn btn__permissions deletep">Delete User</button>
+                            </div> -->
+                            <div class="permissions__buttons--box">
+                                <div class="permissions__activate">
+                                    <!-- <p class="permissions__activate--text">
+                                        Activate User
+                                    </p> -->
+                                    <!-- <div class="permissions__activate--checkbox">
+                                        
+                                        <input id="adminfee" name="adminfee" type="checkbox" class="profileActive">
+                                        <label for="adminfee" class="checkboxLabel">
+                                        <span class="check-handler"></span>
+                                        </label>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="permissions__buttons--right">
+                            <div class="permissions__buttons--box">
+                                <button type="delete" class="btn btn__permissions createp">Create</button>
+                            </div>
+                            <div class="permissions__buttons--box">
+                                <button type="delete" class="btn btn__permissions unlinkp">Unlink</button>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    
+                        <!--========== Delete User Box ===============-->
+                        <!-- <div class="profile__formBox profile__formBox--delete profile__formBox--delete-permissions">
+                            <span class="profile__formBox--cross profile__formBox--cross-delete">&times;</span>
+                            <form action="#" method="post" class="profile__form">
+                                <div class="profile__form--group">
+                                    <h3 class="profile__formBox--heading">
+                                        Create Profile
+                                    </h3>
+                                </div>
+                                <div class="profile__formBox--content">
+                                    <div class="profile__formBox--content-delete profile__formBox--content-delete-permissions">
+                                        <p class="profile__formBox--content-delete-para">
+                                            Please add profile the new profile name and toggle it to activate
+                                        </p>
+                                        <div class="profile__form--group profile__form--group-permissions">
+                                            <label for="firstname" class="profile__form--group-label">Profile Name</label>
+                                            <input type="email" class="profile__form--group-input profilename" placeholder = "Enter the new profile name">
+                                        </div>
+                                        <div class="profile__formBox--content-delete-buttons">
+                                            <input type="button" value="Save" class="btn btn__delete form-modal__submit permissionsActive">
+                                            <input type="button" value="Cancel" class="btn btn__cancel form-modal__cancel">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> -->
+                    <div class="permissions__catalog">
+                        <div class="permissions__catalog--content">
+                            <div class="permissions__catalog--heading">
+                                <h3 class="permissions__catalog--heading-text">
+                                    Controls Catalog
+                                </h3>
+                            </div>
+                            <div class="permissions__catalog--items">
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Payment Method 
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee1" name="permissions[]" type="checkbox" class="profileActive">
+                                            <label for="adminfee1" class="checkboxLabel paddActive">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="permissions__catalog--item">
+                                    <div class="permissions__catalog--item-name">
+                                        <p class="permissions__catalog--item-name-text">
+                                            Tracking / Pixel Active
+                                        </p>
+                                    </div>
+                                    <div class="permissions__catalog--item-switch">
+                                        <p class="permissions__catalog--item-switch-text">
+                                            Deactivate / Activate
+                                        </p>
+                                        <div class="permissions__activate--checkbox">   
+                                            <input id="adminfee2" name="permissions[]" type="checkbox" class="profileActive">
+                                            <label for="adminfee2" class="checkboxLabel paddActive">
+                                            <span class="check-handler"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!--==================================== Footer starts here =============================== -->
+
+<!-- <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__copyright">
+            <p class="footer__copyright--text">
+                &copy; 2023 AdShare Ltd &VerticalLine; Made with
+                <i class="fa-regular fa-heart icon__heart"></i>
+                &VerticalLine; Image Credits
+                <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>
+            </p>
+        </div>
+
+        <nav class="footer__navigation">
+            <ul class="footer__navigation--list">
+                <li class="footer__navigation--item">
+                    <a href="privacy/privacy.html" class="footer__navigation--link">Privacy Policy</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="terms/terms.html" class="footer__navigation--link">Terms & Conditions</a>
+                </li>
+                <li class="footer__navigation--item">
+                    <a href="contact/index.html" class="footer__navigation--link">get help</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer> -->
+
+
+<!--==================================== Footer Ends here =============================== -->
+<!--==================================== Cookies Popup =============================== -->
+
+    <div id="cookie-popup">
+        <p>
+        This website uses cookies to ensure you get the best experience. By continuing to use this site, you agree to our
+        <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+<!--==================================== Cookies Popup Ends Here =============================== -->
+    <div class="overlay">
+
+    </div>
+</div>
+
+
+
+<!-- Jquery CDN Link -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!-- Font Awesome JS CDN Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<!-- IonIcons CDN Link -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="controls.js"></script>
+
+</body>
+</html>
+
